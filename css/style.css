@@ -1075,8 +1075,8 @@ a:hover,a:active {
     position:absolute;
     bottom:3px;
     right:5px;
-    width:32px;
-    height:32px;
+    width:80px;
+    height:80px;
     z-index:7;
     background-position:center;
     background-size:cover;
