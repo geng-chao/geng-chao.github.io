@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.gengchao.vip/"/>
-  <updated>2020-01-05T13:14:35.943Z</updated>
+  <updated>2020-01-05T13:58:53.317Z</updated>
   <id>http://www.gengchao.vip/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试3</title>
+    <link href="http://www.gengchao.vip/2020/01/05/%E6%B5%8B%E8%AF%953/"/>
+    <id>http://www.gengchao.vip/2020/01/05/测试3/</id>
+    <published>2020-01-05T13:50:01.000Z</published>
+    <updated>2020-01-05T13:58:53.317Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#一级标题&lt;/p&gt;
+&lt;p&gt;##二级   &lt;/p&gt;
+&lt;p&gt;###三级&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;引用块&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;sfsgsgs
+
+   s s
+sg 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; 
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>博主简介</title>
@@ -42,11 +74,11 @@
   </entry>
   
   <entry>
-    <title>Hexo-Theme-Sakura</title>
-    <link href="http://www.gengchao.vip/2018/12/12/Hexo-Theme-Sakura%20-%20%E5%89%AF%E6%9C%AC%20(2)/"/>
-    <id>http://www.gengchao.vip/2018/12/12/Hexo-Theme-Sakura - 副本 (2)/</id>
+    <title>测试标题</title>
+    <link href="http://www.gengchao.vip/2018/12/12/%E6%B5%8B%E8%AF%95/"/>
+    <id>http://www.gengchao.vip/2018/12/12/测试/</id>
     <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2020-01-05T13:21:02.798Z</updated>
+    <updated>2020-01-05T13:35:33.588Z</updated>
     
     <summary type="html">
     
