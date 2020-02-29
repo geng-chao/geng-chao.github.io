@@ -3922,13 +3922,14 @@ li.feature-2 {
 }
 #centerbg {
     width:100%;
-    height:550px;
+    height:535px;
     margin:0;
     padding:0;
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size:cover;
-    z-index:-1
+    z-index:-1;
+    margin-top:-20px;
 }
 @media(max-width:560px) {
     #bgvideo {
