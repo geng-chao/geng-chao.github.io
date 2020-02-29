@@ -572,7 +572,8 @@
     width:100%;
     -webkit-transform:rotateY(180deg);
     transform:rotateY(180deg);
-    transition:all .3s ease
+    transition:all .3s ease;
+    background-color: orange;
 }
 .aplayer .aplayer-miniswitcher .aplayer-icon path {
     fill:#666
