@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a: 2020/2 | 耿超Blog</title>
+  <title itemprop="name">Java带参无返回、带参带返回值、方法的重载 | 耿超Blog</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/28.jpg">
   
@@ -371,91 +371,179 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/banner/writing.jpg);" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/banner/writing.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Java带参无返回、带参带返回值、方法的重载</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.gengchao.vip">
+            <img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/21.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="www.gengchao.vip">耿超</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-2-24<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2020年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      02月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2020/02/24/Docker配置阿里云镜像/">
-                          <span style="color:#0bf;">
-                          24日16:30:49</span>
-                          Docker配置阿里云镜像
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2020/02/24/Java带参无返回、带参带返回值、方法的重载/">
-                          <span style="color:#0bf;">
-                          24日16:30:42</span>
-                          Java带参无返回、带参带返回值、方法的重载
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2020/02/24/使用negix转发服务器遇到的问题/">
-                          <span style="color:#0bf;">
-                          24日15:37:18</span>
-                          使用negix转发服务器遇到的问题
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="Java带参无返回、带参带返回值、方法的重载"><a href="#Java带参无返回、带参带返回值、方法的重载" class="headerlink" title="#Java带参无返回、带参带返回值、方法的重载"></a>#Java带参无返回、带参带返回值、方法的重载</h1><p>一、</p>
+<p>有时方法的执行需要依赖于某些条件，换句话说，要想通过方法完成特定的功能，需要为其提供额外的信息才行。例如，现实生活中电饭锅可以实现“煮饭”的功能，但前提是我们必须提供食材，如果我们什么都不提供，那就真是的“巧妇难为无米之炊”了。我们可以通过在方法中加入参数列表接收外部传入的数据信息，参数可以是任意的基本类型数据或引用类型数据。</p>
+<p>我们先来看一个带参数，但没有返回值的方法：</p>
+<p><img src="https://img-blog.csdn.net/20180512211633413" alt></p>
+<p>上面的代码定义了一个 show 方法，带有一个参数 name ，实现输出欢迎消息。</p>
+<p>调用带参方法与调用无参方法的语法类似，但在调用时必须传入实际的参数值</p>
+<p>例如：</p>
+<p><img src="https://img-blog.csdn.net/20180512211707487" alt></p>
+<p>运行结果为： 欢迎您，爱慕课！</p>
+<p>很多时候，我们把定义方法时的参数称为形参，目的是用来定义方法需要传入的参数的个数和类型；把调用方法时的参数称为实参，是传递给方法真正被处理的值。</p>
+<p>一定不可忽视的问题：</p>
+<p>1、 调用带参方法时，必须保证实参的数量、类型、顺序与形参一一对应</p>
+<p><img src="https://img-blog.csdn.net/20180512211728140" alt></p>
+<p>2、 调用方法时，实参不需要指定数据类型，如 </p>
+<p><img src="https://img-blog.csdn.net/20180512211741821" alt></p>
+<p>3、 方法的参数可以是基本数据类型，如 int、double 等，也可以是引用数据类型，如 String、数组等</p>
+<p><img src="https://img-blog.csdn.net/20180512211750838" alt></p>
+<p>4、 当方法参数有多个时，多个参数间以逗号分隔</p>
+<p><img src="https://img-blog.csdn.net/20180512211809302" alt></p>
+<p>二、</p>
+<p>如果方法既包含参数，又带有返回值，我们称为带参带返回值的方法。</p>
+<p>例如：下面的代码，定义了一个 show 方法，带有一个参数 name ，方法执行后返回一个 String 类型的结果</p>
+<p><img src="https://img-blog.csdn.net/20180512211921434?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3llem9uZ3poZW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt></p>
+<p>调用带参带返回值的方法：</p>
+<p><img src="https://img-blog.csdn.net/20180512211939617?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3llem9uZ3poZW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt></p>
+<p>运行结果为： 欢迎您，爱慕课！</p>
+<p>三、</p>
+<p>问： 什么是方法的重载呢？</p>
+<p>答： 如果同一个类中包含了两个或两个以上方法名相同、方法参数的个数、顺序或类型不同的方法，则称为方法的重载，也可称该方法被重载了。如下所示 4 个方法名称都为 show ，但方法的参数有所不同，因此都属于方法的重载：</p>
+<p><img src="https://img-blog.csdn.net/20180512212029641?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3llem9uZ3poZW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt></p>
+<p>问： 如何区分调用的是哪个重载方法呢？</p>
+<p>答： 当调用被重载的方法时， Java 会根据参数的个数和类型来判断应该调用哪个重载方法，参数完全匹配的方法将被执行。如：</p>
+<p><img src="https://img-blog.csdn.net/20180512212049984?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3llem9uZ3poZW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt></p>
+<p>运行结果：</p>
+<p><img src="https://img-blog.csdn.net/20180512212106239?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3llem9uZ3poZW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt></p>
+<p>判断方法重载的依据：</p>
+<p>1、 必须是在同一个类中</p>
+<p>2、 方法名相同</p>
+<p>3、 方法参数的个数、顺序或类型不同</p>
+<p>4、 与方法的修饰符或返回值没有关系</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
             </div>
           </div>
         </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
       </article>
-    </div>
-  </div>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/02/24/Docker配置阿里云镜像/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/45.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/45.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Docker配置阿里云镜像</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/02/24/使用negix转发服务器遇到的问题/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/26.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/26.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                使用negix转发服务器遇到的问题</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.gengchao.vip" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/21.jpg" itemprop="image" alt="耿超" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.gengchao.vip" itemprop="url" rel="author">耿超</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
