@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.gengchao.vip/"/>
-  <updated>2020-02-29T11:10:55.989Z</updated>
+  <updated>2020-02-29T11:14:42.663Z</updated>
   <id>http://www.gengchao.vip/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3</title>
+    <link href="http://www.gengchao.vip/2020/02/29/3/"/>
+    <id>http://www.gengchao.vip/2020/02/29/3/</id>
+    <published>2020-02-29T11:14:42.000Z</published>
+    <updated>2020-02-29T11:14:42.663Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.gengchao.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2</title>
+    <link href="http://www.gengchao.vip/2020/02/29/2/"/>
+    <id>http://www.gengchao.vip/2020/02/29/2/</id>
+    <published>2020-02-29T11:14:32.000Z</published>
+    <updated>2020-02-29T11:14:32.995Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.gengchao.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome 开发者工具的 11 个骚技巧</title>
+    <link href="http://www.gengchao.vip/2020/02/29/Chrome%20%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E7%9A%84%2011%20%E4%B8%AA%E9%AA%9A%E6%8A%80%E5%B7%A7/"/>
+    <id>http://www.gengchao.vip/2020/02/29/Chrome 开发者工具的 11 个骚技巧/</id>
+    <published>2020-02-29T11:14:20.000Z</published>
+    <updated>2020-03-03T06:41:51.652Z</updated>
+    
+    <summary type="html">
+    
+      Chorm开发调试
+    
+    </summary>
+    
+      <category term="Chorm" scheme="http://www.gengchao.vip/categories/Chorm/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Docker配置阿里云镜像</title>
