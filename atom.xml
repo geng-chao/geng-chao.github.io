@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.gengchao.vip/"/>
-  <updated>2020-03-06T10:59:09.534Z</updated>
+  <updated>2020-03-07T03:57:02.233Z</updated>
   <id>http://www.gengchao.vip/</id>
   
   <author>
@@ -17,17 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>6</title>
-    <link href="http://www.gengchao.vip/2020/03/06/6/"/>
-    <id>http://www.gengchao.vip/2020/03/06/6/</id>
+    <title>基于国外服务器搭建自己的VPN详细教程</title>
+    <link href="http://www.gengchao.vip/2020/03/06/%E5%9F%BA%E4%BA%8E%E5%9B%BD%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84VPN%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"/>
+    <id>http://www.gengchao.vip/2020/03/06/基于国外服务器搭建自己的VPN详细教程/</id>
     <published>2020-03-06T10:59:09.000Z</published>
-    <updated>2020-03-06T10:59:09.534Z</updated>
+    <updated>2020-03-07T03:57:02.233Z</updated>
     
     <summary type="html">
     
+      服务器搭建梯子
+    
     </summary>
     
-      <category term="技术" scheme="http://www.gengchao.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="翻墙" scheme="http://www.gengchao.vip/categories/%E7%BF%BB%E5%A2%99/"/>
     
     
   </entry>
@@ -118,8 +120,8 @@
   
   <entry>
     <title>2</title>
-    <link href="http://www.gengchao.vip/2020/02/29/2/"/>
-    <id>http://www.gengchao.vip/2020/02/29/2/</id>
+    <link href="http://www.gengchao.vip/2020/02/29/%E9%94%81/"/>
+    <id>http://www.gengchao.vip/2020/02/29/锁/</id>
     <published>2020-02-29T11:14:32.000Z</published>
     <updated>2020-03-04T11:23:06.026Z</updated>
     
