@@ -390,7 +390,11 @@
           </header>
         
         <div class="entry-content">
-          
+          <h1 id="maven在依赖下载过程中中断怎么办"><a href="#maven在依赖下载过程中中断怎么办" class="headerlink" title="maven在依赖下载过程中中断怎么办"></a><a href="https://www.cnblogs.com/duowenjia/p/12120275.html" target="_blank" rel="noopener">maven在依赖下载过程中中断怎么办</a></h1><p>1.打开cmd</p>
+<p>2.找到本地仓库</p>
+<p>3.执行for /r %i in (*.lastUpdated) do del %i</p>
+<p>这是为了删除所有lastUpdated后缀的文件，这样就能重新下载依赖了</p>
+
         </div>
         <!-- .entry-content -->
         <div class="single-reward">

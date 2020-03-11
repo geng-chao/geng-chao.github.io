@@ -691,7 +691,7 @@ while (true) {
 <blockquote>
 <p><strong>tips</strong>: Java NIO基于Selector实现高性能网络I/O这块使用起来比较繁琐，使用不友好，一般业界使用基于Java NIO进行封装优化，扩展丰富功能的Netty框架来优雅实现</p>
 </blockquote>
-<p>​     <u><font face="黑体" color="green" sice="4">高性能I/O优化</font></u></p>
+<p>​     <u><font face="黑体" color="green" sice="9">高性能I/O优化</font></u></p>
 <p>下面结合业界热门开源项目介绍高性能I/O的优化</p>
 <h2 id="1-零拷贝"><a href="#1-零拷贝" class="headerlink" title="1 零拷贝"></a>1 零拷贝</h2><p>零拷贝(zero copy)技术，用于在数据读写中减少甚至完全避免不必要的CPU拷贝，减少内存带宽的占用，提高执行效率，零拷贝有几种不同的实现原理，下面介绍常见开源项目中零拷贝实现</p>
 <h3 id="1-1-Kafka零拷贝"><a href="#1-1-Kafka零拷贝" class="headerlink" title="1.1 Kafka零拷贝"></a>1.1 Kafka零拷贝</h3><p>Kafka基于Linux 2.1内核提供，并在2.4 内核改进的的sendfile函数 + 硬件提供的DMA Gather Copy实现零拷贝，将文件通过socket传送</p>
@@ -761,7 +761,7 @@ this.mappedByteBuffer = this.fileChannel.map(MapMode.READ_WRITE, 0, fileSize);
 </li>
 </ul>
 <p>## </p>
-<p>​     <u><font face="黑体" color="green" sice="4">2 多路复用</font></u></p>
+<p>​     <u><font face="黑体" color="green" sice="9">2 多路复用</font></u></p>
 <p>Netty中对Java NIO功能封装优化之后，实现I/O多路复用代码优雅了很多：</p>
 <pre><code class="java">// 创建mainReactor
 NioEventLoopGroup boosGroup = new NioEventLoopGroup();
@@ -798,7 +798,7 @@ serverBootstrap.bind(port).addListener(future -&gt; {
     }
 });
 </code></pre>
-<p>   <u><font face="黑体" color="green" sice="4">3 页缓存(PageCache)</font></u></p>
+<p>   <u><font face="黑体" color="green" sice="7">3 页缓存(PageCache)</font></u></p>
 <p>页缓存（PageCache)是操作系统对文件的缓存，用来减少对磁盘的 I/O 操作，以页为单位的，内容就是磁盘上的物理块，页缓存能帮助<strong>程序对文件进行顺序读写的速度几乎接近于内存的读写速度</strong>，主要原因就是由于OS使用PageCache机制对读写访问操作进行了性能优化：</p>
 <p><strong>页缓存读取策略</strong>：当进程发起一个读操作 （比如，进程发起一个 read() 系统调用），它首先会检查需要的数据是否在页缓存中：</p>
 <ul>
@@ -819,7 +819,7 @@ serverBootstrap.bind(port).addListener(future -&gt; {
 <li>异步刷盘，能充分利用操作系统的PageCache的优势，只要消息写入PageCache即可将成功的ACK返回给Producer端。消息刷盘采用后台异步线程提交的方式进行，降低了读写延迟，提高了MQ的性能和吞吐量</li>
 </ul>
 <p>Kafka实现消息高性能读写也利用了页缓存，这里不再展开</p>
-<p>​                                             <u>## <code>参考</code></u></p>
+<p>​                                             ##<code>参考</code></p>
 <p>《深入理解Linux内核 》</p>
 <p>Netty之Java堆外内存扫盲贴 </p>
 <p>Java NIO？看这一篇就够了！</p>
