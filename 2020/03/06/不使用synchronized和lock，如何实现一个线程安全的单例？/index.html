@@ -40,8 +40,8 @@
   mashiro_option.site_name = "BigBoss耿超";
   mashiro_option.author_name = "耿超";
   mashiro_option.site_url = "https://www.gengchao.vip";
-  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
-  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.v_appId = "aeY1WNVHlNPxnev04uP4OGiN-gzGzoHsz";
+  mashiro_option.v_appKey = "eC65yOIwHWdj1SI18Dc25mV2";
   mashiro_option.mathjax = "0";
   mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
   mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
@@ -375,19 +375,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/3D7EAE549AE5D0522DAD874480E63B93.jpg);" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/3D7EAE549AE5D0522DAD874480E63B93.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      不使用synchronized和lock，如何实现一个线程安全的单例？</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.gcweb.top">
+            <img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/21.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="www.gcweb.top">耿超</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-3-6<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
       <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
         <div class="toc"></div>
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
-        
-          <header class="entry-header">
-            <h1 class="entry-title">不使用synchronized和lock，如何实现一个线程安全的单例？</h1>
-            <p class="entry-census">耿超&nbsp;·&nbsp;2020-3-6&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
-
-            <hr>
-          </header>
         
         <div class="entry-content">
           <p>单例，大家肯定都不陌生，这是Java中很重要的一个设计模式。稍微了解一点单例的朋友也都知道实现单例是要考虑并发问题的，一般情况下，我们都会使用synchronized来保证线程安全。</p>
@@ -544,8 +561,8 @@
       var valine = new Valine();
       valine.init({
         el: '#vcomments',
-        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
-        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        appId: "aeY1WNVHlNPxnev04uP4OGiN-gzGzoHsz",
+        appKey: "eC65yOIwHWdj1SI18Dc25mV2",
         path: window.location.pathname,
         placeholder: "你是我一生只会遇见一次的惊喜 ..."
       })

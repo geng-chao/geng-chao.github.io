@@ -157,23 +157,18 @@
     <link href="http://www.gengchao.vip/2020/03/06/%E4%B8%8D%E4%BD%BF%E7%94%A8synchronized%E5%92%8Clock%EF%BC%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%8D%95%E4%BE%8B%EF%BC%9F/"/>
     <id>http://www.gengchao.vip/2020/03/06/不使用synchronized和lock，如何实现一个线程安全的单例？/</id>
     <published>2020-03-06T10:58:58.000Z</published>
-    <updated>2020-03-11T06:41:49.360Z</updated>
+    <updated>2020-03-11T08:11:53.871Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;单例，大家肯定都不陌生，这是Java中很重要的一个设计模式。稍微了解一点单例的朋友也都知道实现单例是要考虑并发问题的，一般情况下，我们都会使用synchronized来保证线程安全。&lt;/p&gt;
-&lt;p&gt;那么，：&lt;strong&gt;不使用synchronized和lock，如何实现一
-        
-      
+      线程安全
     
     </summary>
     
-      <category term="技术" scheme="http://www.gengchao.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="随想" scheme="http://www.gengchao.vip/categories/%E9%9A%8F%E6%83%B3/"/>
     
+    
+      <category term="悦读" scheme="http://www.gengchao.vip/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
