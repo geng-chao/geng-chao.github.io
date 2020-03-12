@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.gengchao.vip/"/>
-  <updated>2020-03-11T07:11:56.886Z</updated>
+  <updated>2020-03-12T03:51:25.694Z</updated>
   <id>http://www.gengchao.vip/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>8</title>
+    <link href="http://www.gengchao.vip/2020/03/12/8/"/>
+    <id>http://www.gengchao.vip/2020/03/12/8/</id>
+    <published>2020-03-12T03:51:25.000Z</published>
+    <updated>2020-03-12T03:51:25.694Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.gengchao.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>6</title>
