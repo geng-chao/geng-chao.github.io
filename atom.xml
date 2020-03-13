@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.gengchao.vip/"/>
-  <updated>2020-03-13T05:53:15.835Z</updated>
+  <updated>2020-03-13T06:09:53.407Z</updated>
   <id>http://www.gengchao.vip/</id>
   
   <author>
@@ -17,19 +17,49 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一文教会你用IDEA追踪bug</title>
-    <link href="http://www.gengchao.vip/2020/03/12/%E4%B8%80%E6%96%87%E6%95%99%E4%BC%9A%E4%BD%A0%E7%94%A8IDEA%E8%BF%BD%E8%B8%AAbug/"/>
-    <id>http://www.gengchao.vip/2020/03/12/一文教会你用IDEA追踪bug/</id>
-    <published>2020-03-12T03:51:25.000Z</published>
-    <updated>2020-03-13T05:53:15.835Z</updated>
+    <title>3</title>
+    <link href="http://www.gengchao.vip/2020/03/13/3/"/>
+    <id>http://www.gengchao.vip/2020/03/13/3/</id>
+    <published>2020-03-13T06:09:53.000Z</published>
+    <updated>2020-03-13T06:09:53.407Z</updated>
     
     <summary type="html">
     
-      使用DeBUG
+    </summary>
+    
+      <category term="技术" scheme="http://www.gengchao.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2</title>
+    <link href="http://www.gengchao.vip/2020/03/13/2/"/>
+    <id>http://www.gengchao.vip/2020/03/13/2/</id>
+    <published>2020-03-13T06:09:47.000Z</published>
+    <updated>2020-03-13T06:09:47.740Z</updated>
+    
+    <summary type="html">
     
     </summary>
     
-      <category term="转载" scheme="http://www.gengchao.vip/categories/%E8%BD%AC%E8%BD%BD/"/>
+      <category term="技术" scheme="http://www.gengchao.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1</title>
+    <link href="http://www.gengchao.vip/2020/03/13/1/"/>
+    <id>http://www.gengchao.vip/2020/03/13/1/</id>
+    <published>2020-03-13T06:09:41.000Z</published>
+    <updated>2020-03-13T06:09:41.240Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="技术" scheme="http://www.gengchao.vip/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
   </entry>
@@ -39,7 +69,7 @@
     <link href="http://www.gengchao.vip/2020/03/11/%E4%B8%89%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99%EF%BC%8C%E5%8F%8A%E5%AD%A6%E7%BC%96%E7%A8%8B%E7%9A%84%E6%8A%80%E5%B7%A7/"/>
     <id>http://www.gengchao.vip/2020/03/11/三个好用的网站，及学编程的技巧/</id>
     <published>2020-03-11T07:11:56.000Z</published>
-    <updated>2020-03-13T05:44:51.205Z</updated>
+    <updated>2020-03-13T06:07:26.834Z</updated>
     
     <summary type="html">
     
