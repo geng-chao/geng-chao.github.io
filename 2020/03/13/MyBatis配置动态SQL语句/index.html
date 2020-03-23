@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">3 | 耿超Blog</title>
+  <title itemprop="name">MyBatis配置动态SQL语句 | 耿超Blog</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/28.jpg">
   
@@ -375,6 +375,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/12.1-04-000.png);" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/12.1-04-000.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      MyBatis配置动态SQL语句</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.gcweb.top">
+            <img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/21.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="www.gcweb.top">耿超</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-3-13<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
@@ -382,15 +406,117 @@
         <div class="toc"></div>
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
-          <header class="entry-header">
-            <h1 class="entry-title">3</h1>
-            <p class="entry-census">耿超&nbsp;·&nbsp;2020-3-13&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
-
-            <hr>
-          </header>
-        
         <div class="entry-content">
-          
+          <p>在 MyBatis 的 SQL映射文件中，有时候需要根据一些查询条件，来选择不同的SQL语句，如果每一个场景都重写SQL，很显然效率没有很高，而 MyBatis 的动态SQL很好的解决了这种问题，根据条件动态的处理 SQL, 特别简单的说就是，写一次SQL，但是根据分支等的跳转，在多个场景下也可以使用，例如：</p>
+<ul>
+<li>当查询条件由于参数不同而无法确定具体是什么，可以使用 <code>&lt;where&gt;</code> 标签包含</li>
+<li>在 <code>&lt;where&gt;</code> 可以使用 <code>&lt;if test=&quot;....&quot;&gt;</code> 分条件进行处理，实现动态</li>
+<li><code>&lt;foreach&gt;</code> 遍历标签放到后面代码中具体说</li>
+</ul>
+<p>在此之外，动态SQL同时结局了，在原生 JDBC 中需要拼接SQL语句时由于书写问题，而导致报错</p>
+<h2 id="一-where-和-if-标签"><a href="#一-where-和-if-标签" class="headerlink" title="(一) where 和 if 标签"></a>(一) where 和 if 标签</h2><h4 id="UserMapper-接口"><a href="#UserMapper-接口" class="headerlink" title="UserMapper 接口"></a>UserMapper 接口</h4><pre><code>/**
+* 根据条件查询
+* @return
+*/
+List&lt;User&gt; findUserByCondition(User user);
+</code></pre><h4 id="UserMapper-xml"><a href="#UserMapper-xml" class="headerlink" title="UserMapper.xml"></a>UserMapper.xml</h4><pre><code>&lt;select id=&quot;findUserByCondition&quot; resultType=&quot;cn.ideal.domain.User&quot; parameterType=&quot;cn.ideal.domain.User&quot;&gt;
+    select  * from user
+    &lt;where&gt;
+           &lt;if test=&quot;username != null&quot;&gt;
+            and username = #{username}
+        &lt;/if&gt;
+        &lt;if test=&quot;gender != null&quot;&gt;
+            and gender = #{gender}
+        &lt;/if&gt;
+    &lt;/where&gt;
+&lt;/select&gt;
+</code></pre><p>注意：在SQL中，“and” 用来拼接已有一个或多个查询条件的语句，当此语句为第一个查询条件的时候，会因为 <code>&lt;where&gt;</code> 的存在屏蔽第一个 “and”</p>
+<h4 id="MyBatisTest"><a href="#MyBatisTest" class="headerlink" title="MyBatisTest"></a>MyBatisTest</h4><pre><code>/**
+ * 根据条件查询
+ * @throws Exception
+ */
+@Test
+public void testFindByCondition() throws Exception{
+    User user = new User();
+    user.setUsername(&quot;张三&quot;);
+    user.setGender(&quot;男&quot;);
+
+    List&lt;User&gt; users = userMapper.findUserByCondition(user);
+    for (User u : users){
+        System.out.println(u);
+    }
+</code></pre><h4 id="执行效果"><a href="#执行效果" class="headerlink" title="执行效果"></a>执行效果</h4><pre><code>- ==&gt; Preparing: slect * from user WHERE username? and gender =?
+- ==&gt; Preparing : 张三（String），男（String）
+-&lt;==    Total:2
+</code></pre><p><code>User{id =1 ,username =&#39;张三&#39; ,telephone=121212111,birthday = Mon Feb 03 17:34:23 CST 2020 ,gender =&#39;男&#39; anddress=&#39;上海&#39;}</code></p>
+<p><code>User{id =2 ,username =&#39;张三&#39; ,telephone=12345353111,birthday = Sun Feb 04 15:30:23 CST 2020 ,gender =&#39;男&#39; anddress=&#39;北京&#39;}</code></p>
+<h2 id="二-复用SQL"><a href="#二-复用SQL" class="headerlink" title="(二) 复用SQL"></a>(二) 复用SQL</h2><p>有一些语句，在我们的程序中，使用的频率特别高，这个时候，我们也可以对其进行，单独的配置，然后达到复用的效果</p>
+<p>首先，我们需要对其进行简单的声明</p>
+<pre><code>&lt;sql id=&quot;xxxxx&quot;&gt;
+    &lt;!-- 复用的SQL --&gt;
+&lt;/sql&gt;
+</code></pre><p>在需要引用的地方，我们可以这样引用</p>
+<pre><code>&lt;where&gt;
+    include refid=&quot;xxxxx&quot;&gt;&lt;/include&gt;
+    &lt;!-- 可能还用引用别的 --&gt;
+&lt;/where&gt;
+</code></pre><h2 id="三-foreach标签"><a href="#三-foreach标签" class="headerlink" title="(三) foreach标签"></a>(三) foreach标签</h2><p>提出这样一种需求，在用户中查询寻多个id，例如（12,16,17）我们可以这样写SQL</p>
+<pre><code>select * from user where id=12 or id=16 or id=17
+</code></pre><p>或者这样</p>
+<pre><code>select * from user where id in (12,16,17)
+</code></pre><p>而这种情况下，我们需要向SQL中传递一个数据或者List类型的参数，然后使用 <code>&lt;foreach&gt;</code> 标签去遍历然后解析</p>
+<h4 id="UserMapper-接口-1"><a href="#UserMapper-接口-1" class="headerlink" title="UserMapper 接口"></a>UserMapper 接口</h4><pre><code>/**
+     * 根据QueryUserVo中提供的id集合，查询用户信息
+     * @param vo
+     * @return
+     */
+    List&lt;User&gt; findUserInIds(QueryUserVo vo);
+</code></pre><h4 id="UserMapper-xml-1"><a href="#UserMapper-xml-1" class="headerlink" title="UserMapper.xml"></a>UserMapper.xml</h4><pre><code>&lt;select id=&quot;findUserInIds&quot; resultType=&quot;cn.ideal.domain.UserInstance&quot; parameterType=&quot;cn.ideal.domain.QueryUserVo&quot;&gt;
+    select * from user
+    &lt;where&gt;
+        &lt;if test=&quot;ids != null and ids.size() &gt; 0&quot;&gt;
+            &lt;foreach collection=&quot;ids&quot; open=&quot;and id in (&quot; close=&quot;)&quot; item=&quot;uid&quot; separator=&quot;,&quot;&gt;
+                #{uid}
+            &lt;/foreach&gt;
+        &lt;/if&gt;
+    &lt;/where&gt;
+&lt;/select&gt;
+</code></pre><p>解释一下</p>
+<ul>
+<li><p>collection 指定输入对象中的集合属性</p>
+</li>
+<li><p>item 为每次遍历生成的对象名</p>
+</li>
+<li><p>open为开始遍历时拼接的字符串</p>
+</li>
+<li><p>close为结束便利时要拼接的字符串</p>
+</li>
+<li><p>separator为遍历两个对象中间需要拼接的串</p>
+<p>​</p>
+</li>
+</ul>
+<p>本例中，我哦们使用了 <code>select * from user where id in (12,16,17)</code> 这种形式，如果想使用 or那种形式，只需要修改拼接格式就可以了</p>
+<pre><code>/**
+ * 根据QueryUserVo中提供的id集合，查询用户信息
+ * @throws Exception
+ */
+    @Test
+    public void testfindUserInIds() throws Exception{
+        QueryUserVo vo = new QueryUserVo();
+        List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+        list.add(12);
+        list.add(16);
+        list.add(17);
+        vo.setIds(list);
+
+        List&lt;User&gt; users = userMapper.findUserInIds(vo);
+        for (User u : users){
+            System.out.println(u);
+        }
+    }
+</code></pre><h4 id="执行效果-1"><a href="#执行效果-1" class="headerlink" title="执行效果"></a>执行效果</h4><p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/12.1-04-003.png" alt> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/12.1-04-005.png" alt></p>
+
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
@@ -421,7 +547,7 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/2020/03/20/8/" rel="prev">
+            <a href="/2020/03/13/3/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
               </div>
@@ -429,7 +555,7 @@
               Previous Post</span>
               <div class="info">
                 <h3>
-                8</h3>
+                3</h3>
                 <hr>
               </div>
             </a>
@@ -439,15 +565,15 @@
           
             <div class="post-nepre half next">
           
-            <a href="/2020/03/13/MyBatis配置动态SQL语句/" rel="next">
+            <a href="/2020/03/11/三个好用的网站，及学编程的技巧/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/12.1-04-000.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/12.1-04-000.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/25846A61B799665CCF058EC684D5CC86.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/25846A61B799665CCF058EC684D5CC86.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                MyBatis配置动态SQL语句</h3>
+                三个好用的网站，及学编程的技巧</h3>
                 <hr>
               </div>
             </a>

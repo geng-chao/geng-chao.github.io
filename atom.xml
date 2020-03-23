@@ -49,17 +49,19 @@
   </entry>
   
   <entry>
-    <title>1</title>
-    <link href="http://www.gcblog.vip/2020/03/13/1/"/>
-    <id>http://www.gcblog.vip/2020/03/13/1/</id>
+    <title>MyBatis配置动态SQL语句</title>
+    <link href="http://www.gcblog.vip/2020/03/13/MyBatis%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81SQL%E8%AF%AD%E5%8F%A5/"/>
+    <id>http://www.gcblog.vip/2020/03/13/MyBatis配置动态SQL语句/</id>
     <published>2020-03-13T06:09:41.000Z</published>
-    <updated>2020-03-13T06:09:41.240Z</updated>
+    <updated>2020-03-22T00:54:39.535Z</updated>
     
     <summary type="html">
     
+      SQl语句
+    
     </summary>
     
-      <category term="技术" scheme="http://www.gcblog.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="java" scheme="http://www.gcblog.vip/categories/java/"/>
     
     
   </entry>
@@ -87,7 +89,7 @@
     <link href="http://www.gcblog.vip/2020/03/11/%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%AD%BB%E9%94%81/"/>
     <id>http://www.gcblog.vip/2020/03/11/处理机调度与死锁/</id>
     <published>2020-03-11T07:11:51.000Z</published>
-    <updated>2020-03-13T04:05:23.088Z</updated>
+    <updated>2020-03-22T00:29:52.138Z</updated>
     
     <summary type="html">
     
@@ -105,17 +107,11 @@
     <link href="http://www.gcblog.vip/2020/03/11/IDEA%20%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.gcblog.vip/2020/03/11/IDEA 的使用/</id>
     <published>2020-03-11T07:11:40.000Z</published>
-    <updated>2020-03-13T04:55:01.487Z</updated>
+    <updated>2020-03-22T00:33:00.694Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;日常使用-必备快捷键（★★）&quot;&gt;&lt;a href=&quot;#日常使用-必备快捷键（★★）&quot; class=&quot;headerlink&quot; title=&quot;日常使用 必备快捷键（★★）&quot;&gt;&lt;/a&gt;&lt;strong&gt;日常使用 必备快捷键（★★）&lt;/strong&gt;&lt;/h2&gt;&lt;h2
-        
-      
+      IDEA使用技巧
     
     </summary>
     
