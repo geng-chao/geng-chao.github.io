@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Category: java | 耿超Blog</title>
+  <title itemprop="name">开源项目结构 | 耿超Blog</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/28.jpg">
   
@@ -371,303 +371,208 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img data-src="java.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200304181256.png);" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200304181256.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      开源项目结构</h1>
+      <p class="entry-census">
+        <span>
+          <a href="www.gcweb.top">
+            <img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/21.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="www.gcweb.top">耿超</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-3-24<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">java.zh</h1>
-    <span class="cat-des">
-      <p>java.en</p>
-    </span>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>《阿里巴巴Java开发手册》关于工程结构和应用分层相关的内容</p>
+<p>它这里面讲的内容大概就是：关于一个正常的企业项目里一种<strong>通用的项目结构和代码层级划分</strong>的指导意见。</p>
+<p>按这本书上说的，一般分为如下几层：</p>
+<ul>
+<li>开放接口层</li>
+<li>终端显示层</li>
+<li>Web 层</li>
+<li>Service 层</li>
+<li>Manager 层</li>
+<li>DAO 层</li>
+<li>外部接口或第三方平台</li>
+</ul>
+<p>由于书中的篇幅关系，它这地方讲得比较笼统了，估计初学者看了还是会懵，所以接下来<strong>结合实际项目代码结构</strong>，来唠一唠具体的项目结构和代码分层。</p>
+<hr>
+<h2 id="通常的项目结构"><a href="#通常的项目结构" class="headerlink" title="通常的项目结构"></a>通常的项目结构</h2><p><code>**首先说在前面的是**：这东西并没有一套通用的标准，不同公司或者团队的使用习惯和规范也不尽相同</code>。</p>
+<p>我们就以当下非常火热的Spring Boot典型项目结构为例，创建出来的项目应该总体分为三大层：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200324160109.png" alt> </p>
+<ul>
+<li><code>项目根目录/src/main/java</code>：放置项目Java源代码</li>
+<li><code>项目根目录/src/main/resources</code>：放置项目静态资源和配置文件</li>
+<li><code>项目根目录/src/test/java</code>：放置项目测试用例代码</li>
+</ul>
+<p>而位于<code>/src/main/java</code>目录下的Java源代码的组织结构大家比较关心，这地方也只能给出一个通常典型的结构，毕竟不同项目和团队实践不一样，稍许有区别，但整体安排应该差不多。而且如果是<strong>多模块</strong>的项目的话，下面的结构应该只对应其中一个模块，其他模块的代码组织也大致差不多。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200324160118.png" alt> </p>
+<p>各个目录详细介绍：</p>
+<pre><code>|_annotation：放置项目自定义注解
+|_aspect：放置切面代码
+|_config：放置配置类
+|_constant：放置常量、枚举等定义
+   |__consist：存放常量定义
+   |__enums：存放枚举定义
+|_controller：放置控制器代码
+|_filter：放置一些过滤、拦截相关的代码
+|_mapper：放置数据访问层代码接口
+|_model：放置数据模型代码
+   |__entity：放置数据库实体对象定义
+   |__dto：存放数据传输对象定义
+   |__vo：存放显示层对象定义
+|_service：放置具体的业务逻辑代码（接口和实现分离）
+   |__intf：存放业务逻辑接口定义
+   |__impl：存放业务逻辑实际实现
+|_utils：放置工具类和辅助代码
+</code></pre><p>然后接下来<code>/src/main/resources</code>目录，里面主要存放静态配置文件和页面静态资源等东西：</p>
+<pre><code>|_mapper：存放mybatis的XML映射文件（如果是mybatis项目）
+|_static：存放网页静态资源，比如下面的js/css/img
+   |__js：
+   |__css：
+   |__img：
+   |__font：
+   |__等等
+|_template：存放网页模板，比如thymeleaf/freemarker模板等
+   |__header
+   |__sidebar
+   |__bottom
+   |__XXX.html等等
+|_application.yml       基本配置文件
+|_application-dev.yml   开发环境配置文件
+|_application-test.yml  测试环境配置文件
+|_application-prod.yml  生产环境配置文件
+</code></pre><p>当然，这地方估计有一个<strong>很多人都会纠结的</strong>关于<code>DTO/VO/DO</code>等<strong>数据模型定义</strong>的区分。</p>
+<p>这在《阿里巴巴Java开发手册》中倒是做了一个所谓的严格区分，那本书上是这样去定义的：</p>
+<ul>
+<li><code>DO（Data Object）</code>：与数据库表结构一一对应，通过DAO层向上传输数据源对象。</li>
+<li><code>DTO（Data Transfer Object）</code>：数据传输对象，Service或Manager向外传输的对象。</li>
+<li><code>BO（Business Object）</code>：业务对象。由Service层输出的封装业务逻辑的对象。</li>
+<li><code>AO（Application Object）</code>：应用对象。在Web层与Service层之间抽象的复用对象模型，极为贴近展示层，复用度不高。</li>
+<li><code>VO（View Object）</code>：显示层对象，通常是Web向模板渲染引擎层传输的对象。</li>
+<li><code>Query</code>：数据查询对象，各层接收上层的查询请求。注意超过2个参数的查询封装，禁止使用Map类来传输。</li>
+</ul>
+<p>老实讲，看到这么多对象的定义，我也是很蒙的。实际项目开发时，我觉得没有必要刻意照搬去定义这么多层对象，这样后续做对象转换工作都能烦skr人。</p>
+<p>出于简单起见，我个人觉得，只要保证业务逻辑层<code>Service</code>和数据库<code>DAO</code>层的操作对象严格划分出来，确保互相不渗透，不混用，问题应该就不大。</p>
+<p>比如在我上面举例的这个项目的代码结构中，<code>Service</code>层处理的对象都定义在了<code>dto</code>包里，而<code>DAO</code>层处理的对象都放在了<code>entity</code>包里了。</p>
+<hr>
+<h2 id="项目结构划分总结"><a href="#项目结构划分总结" class="headerlink" title="项目结构划分总结"></a>项目结构划分总结</h2><p>如果从一个用户访问一个网站的情况来看，对应着上面的项目代码结构来分析，可以贯穿整个代码分层：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200324160130.png" alt> </p>
+<p>对应代码目录的流转逻辑就是：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/64afafaf0.jpg" alt> </p>
+<p>我想，应该看得比较清楚了吧。</p>
+<p><strong>所以，以后每当我们拿到一个新的项目到手时，只要按照这个思路去看别人项目的代码，应该基本都是能理得顺的</strong>。</p>
+<hr>
+<h2 id="一些注意事项"><a href="#一些注意事项" class="headerlink" title="一些注意事项"></a>一些注意事项</h2><p>1、<code>Contorller</code>层参数传递建议不要使用<code>HashMap</code>，建议使用数据模型定义</p>
+<p>2、<code>Controller</code>层里可以做参数校验、异常抛出等操作，但建议不要放太多业务逻辑，业务逻辑尽量放到<code>Service</code>层代码中去做</p>
+<p>3、<code>Service</code>层做实际业务逻辑，可以按照功能模块做好定义和区分，相互可以调用</p>
+<p>4、功能模块<code>Service</code>之间引用时，建议不要渗透到<code>DAO</code>层（或者<code>mapper</code>层），基于<code>Service</code>层进行调用和复用比较合理</p>
+<p>5、业务逻辑层<code>Service</code>和数据库<code>DAO</code>层的操作对象不要混用。<code>Controller</code>层的数据对象不要直接渗透到<code>DAO</code>层（或者<code>mapper</code>层）；同理数据表实体对象<code>Entity</code>也不要直接传到<code>Controller</code>层进行输出或展示。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/03/20/线程、多线程与线程池总结/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200324161106.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200324161106.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                线程、多线程与线程池总结</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/24/开源项目结构/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200304181256.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/24/开源项目结构/">
-    开源项目结构</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-24</div>
-    <p>
-    项目结构</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/24/开源项目结构/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/20/线程、多线程与线程池总结/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200324161106.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/20/线程、多线程与线程池总结/">
-    线程、多线程与线程池总结</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-20</div>
-    <p>
-    线程，多线程</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/20/线程、多线程与线程池总结/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/13/关于枚举enum/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200308141801.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/13/关于枚举enum/">
-    关于枚举enum</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-13</div>
-    <p>
-    枚举</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/13/关于枚举enum/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/13/MyBatis配置动态SQL语句/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/12.1-04-000.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/13/MyBatis配置动态SQL语句/">
-    MyBatis配置动态SQL语句</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-13</div>
-    <p>
-    SQl语句</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/13/MyBatis配置动态SQL语句/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "aeY1WNVHlNPxnev04uP4OGiN-gzGzoHsz",
+        appKey: "eC65yOIwHWdj1SI18Dc25mV2",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="www.gcweb.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/21.jpg" itemprop="image" alt="耿超" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="www.gcweb.top" itemprop="url" rel="author">耿超</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>Just Do It</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
 
-<!-- 
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/24/开源项目结构/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200304181256.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/24/开源项目结构/">
-    开源项目结构</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-24</div>
-    <p>
-    项目结构</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/24/开源项目结构/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/20/线程、多线程与线程池总结/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200324161106.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/20/线程、多线程与线程池总结/">
-    线程、多线程与线程池总结</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-20</div>
-    <p>
-    线程，多线程</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/20/线程、多线程与线程池总结/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/13/关于枚举enum/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200308141801.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/13/关于枚举enum/">
-    关于枚举enum</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-13</div>
-    <p>
-    枚举</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/13/关于枚举enum/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/13/MyBatis配置动态SQL语句/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/12.1-04-000.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/13/MyBatis配置动态SQL语句/">
-    MyBatis配置动态SQL语句</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-13</div>
-    <p>
-    SQl语句</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/13/MyBatis配置动态SQL语句/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
 
- -->
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
