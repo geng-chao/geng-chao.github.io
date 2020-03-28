@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">基于国外服务器搭建自己的VPN详细教程 | 耿超Blog</title>
+  <title itemprop="name">耿超Blog</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/28.jpg">
   
@@ -371,216 +371,124 @@
   </div>
 </header>
 
-      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-<div class="pattern-center-blank"></div>
-
-  <div class="pattern-center single-center">
-    <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/youtopicaaa.png);" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/youtopicaaa.png">
-    </div>
-    <header class="pattern-header single-header">
-      <h1 class="entry-title">
-      基于国外服务器搭建自己的VPN详细教程</h1>
-      <p class="entry-census">
-        <span>
-          <a href="www.gcweb.top">
-            <img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/21.jpg">
-          </a>
-        </span>
-        <span>
-          <a href="www.gcweb.top">耿超</a>
-        </span>
-        <span class="bull">
-        ·</span>
-        2020-3-6<span class="bull">
-        ·</span>
-      <span id="busuanzi_value_page_pv"></span>次阅读</p>
-    </header>
-  </div>
-
+      <div class="blank" style="padding-top: 0px;"></div>
 <div id="content" class="site-content">
+  
+  <div class="notice" style="margin-top:60px">
+    <i class="iconfont icon-notification">
+    </i>
+    <div class="notice-content">OneDay我写的代码会运行在千万台机器上。</div>
+  </div>
+  
+  <div class="top-feature-row">
+  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
+  <i class="fa fa-anchor" aria-hidden="true">
+  </i>
+  START:DASH!!</h1>
+  
+  <div class="top-feature-v2">
+    <div class="the-feature square from_left_and_right">
+      <a href="/theme-sakura/" target="_blank">
+        <div class="img">
+          <img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/27.jpg">
+        </div>
+        <div class="info">
+          <h3>Sakura</h3>
+          <p>Show</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <div class="top-feature-v2">
+    <div class="the-feature square from_left_and_right">
+      <a href="http://space.bilibili.com/484691151" target="_blank">
+        <div class="img">
+          <img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/18.png">
+        </div>
+        <div class="info">
+          <h3>Bilibili</h3>
+          <p>博主的b站视频</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <div class="top-feature-v2">
+    <div class="the-feature square from_left_and_right">
+      <a href="http://www.gcweb.top" target="_blank">
+        <div class="img">
+          <img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/30.jpg">
+        </div>
+        <div class="info">
+          <h3>BigBoss的万事屋</h3>
+          <p>技术服务</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+</div>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
-        
-        <div class="entry-content">
-          <p>很多工作上生活上我们都需要翻墙，但是现在的第三方各种原因都不那么好用了，这里就来跟大家分享下如何利用海外服务器搭建自己私人VPN。</p>
-<p>首先这个方法不是免费的哦</p>
-<h3 id="一、为什么选用shadowsocks？"><a href="#一、为什么选用shadowsocks？" class="headerlink" title="一、为什么选用shadowsocks？"></a>一、为什么选用shadowsocks？</h3><p>其实翻墙工具有很多，比较出名的有VPN,ssh通道等方法，而我为什么选用shadowsocks呢？原因很简单：天朝的GFW 比较牛，shadowsocks比较不容易被封(<em>这点很重要</em>)。而且还具有一下特点：<br>快速（异步I/O和事件驱动程序）<br>安全（所有的流量都经过加密算法加密，支持自定义算法）<br>支持移动客户端（专为移动设备和无线网络优化）<br>跨平台（可运行于包括PC，Mac，手机（Android和iOS）和路由器（OpenWrt）在内的多种平台上）<br>开源、易于维护</p>
-<h3 id="二、shadowsocks原理介绍"><a href="#二、shadowsocks原理介绍" class="headerlink" title="二、shadowsocks原理介绍"></a>二、shadowsocks原理介绍</h3><p>介绍shadowsocks原理，必须要先了解我们现在网络访问过程 正常情况下，我们访问各种网站都是简单而直接的，用户的请求通过互联网发送到服务提供方，服务提供方直接将信息反馈给用户，如下图所示：</p>
-<p><img src="http://img.blog.csdn.net/20171031124417882?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbnVtX29uZV9pc19tZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"> 我们国家为了控制国内对国外网络的访问，在中间加了一层防火墙GFW,他像一个收费站一样夹在了在用户和服务之间，每当用户需要获取信息，都经过了 GFW，GFW将它不喜欢的内容统统过滤掉，于是客户当触发 GFW 的过滤规则的时候，就会收到 Connection Reset 这样的响应内容，而无法接收到正常的内容。如下图：</p>
-<p><img src="http://img.blog.csdn.net/20171031124652155?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbnVtX29uZV9pc19tZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"> 而shadowsocks的出现解决了这一难题，他的访问过程是这样的：</p>
-<ol>
-<li>客户端发出的请求基于 Socks5 协议跟 ss-local 端进行通讯，由于这个 ss-local 一般是本机或路由器 局域网的其他机器，不经过 GFW，所以解决了上面被 GFW 通过特征分析进行干扰的问题（1、6)</li>
-<li>ss-local 和 ss-server 两端通过多种可选的加密方法进行通讯，经过 GFW 的时候是常规的TCP包，没有明显的特征码而且 GFW 也无法对通讯数据进行解密( 2、5)</li>
-<li>ss-server 将收到的加密数据进行解密，还原原来的请求，再发送到用户需要（3、4）<br><img src="http://img.blog.csdn.net/20171031125553341?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbnVtX29uZV9pc19tZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"> </li>
-</ol>
-<p><code>终上所述，shadowsocks的作用是产生一个代理，包装请求，从而瞒过GFW的监控，达到访问外网的目的。</code></p>
-<p><strong>第一步：</strong>你需要有一台<a href="https://www.idcbest.com/" target="_blank" rel="noopener">国外的服务器</a>，或者香港服务器也可以；云服务平台有很多，如果只是单纯的搭建VPN，可以买便宜的服务器。</p>
-<p><strong>第二步：</strong>服务器配置，安装Shadowsocks Server</p>
-<p>1、执行如下命令</p>
-<pre><code class="java">wget --no-check-certificate -O shadowsocks-all.sh 
-
-https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
-</code></pre>
-<p>2、上面的命令执行结束后，执行下面的命令</p>
-<pre><code>chmod +x shadowsocks-all.sh
-</code></pre><p>3、上面的命令执行结束后，执行下面的命令</p>
-<pre><code>./shadowsocks-all.sh 2&gt;&amp;1| tee shadowsocks-all.log
-</code></pre><p>4、执行上述命令会有相关输入提示操作；根据需要选择。不明白的话就直接选1或者直接默认回车；之后会提示你输入密码和端口，对应设置即可，或者直接使用默认的；由于 iPhone端的wingy目前只支持到cfb，所以加密方式选择aes-256-cfb也就是选择7；全部执行完成之后就会出现如下信息：</p>
-<pre><code class="text">StartingShadowsocks success
-
-Congratulations, Shadowsocks-Python server install completed!
-
-YourServer IP        :  你的IP
-
-YourServerPort:  在第四步提示设置的端口号
-
-YourPassword:  在第四步提示设置的密码
-
-YourEncryptionMethod:  aes-256-cfb
-
-Your QR Code: (ForShadowsocksWindows, OSX, Androidand iOS clients)
-
- ss://YWVzLTI1Ni1jZmI6emh1aTA4MTA0MTJaaaccuMjmmLjU1LjE5MTo4tdVg4
-
-Your QR Code has been saved as a PNG file path:
-
-/root/shadowsocks_python_qr.png
-
-Welcome to visit: https://teddysun.com/486.html
-
-Enjoy it!
-
-</code></pre>
-<p>5、看到以上信息就说明安装完成了，然后根据不同的终端设备进行设置就可以了</p>
-<p><strong>第三步、使用Shadowsocks终端体验VPN</strong></p>
-<p>1、下载对应客户端</p>
-<p>Windows：<a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-windows/releases</a></p>
-<p>Mac：<a href="https://github.com/yangfeicheung/Shadowsocks-X/releases" target="_blank" rel="noopener">https://github.com/yangfeicheung/Shadowsocks-X/releases</a></p>
-<p>Android：<a href="https://github.com/shadowsocks/shadowsocks-android/releases" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-android/releases</a></p>
-<p>iPhone：App Store上下载ShadowLink，这个要用国外appid才可以下载哦。国内的搜不到的，因为shadowrocket收费的</p>
-<p>2、配置Shadowsocks</p>
-<p>windows</p>
-<p>下载之后运行就会看到右下角有小飞机，然后右键编辑服务器；对应的服务器地址、端口、密码、加密方式就是第二步中4步骤中看到的信息，对应填写确定即可；</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200307113158.png" alt>  </p>
-<p>见证奇迹的时刻到了浏览器打开<a href="https://www.google.com/" target="_blank" rel="noopener">https://www.google.com/</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200307113209.png" alt>      </p>
-<p>android手机</p>
-<p>安装好上面对应的客户端如下图左边的填写对应的服务ip、端口、密码、加密方式然后保存；然后点击中间图下面的小飞机，看到手机上面有个钥匙的就是成功了，然后你就可以用浏览器访问Google嘞</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200307113215.png" alt>   </p>
-<p><code>然后是。</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/202001020006aa.jpg" alt=" "> </p>
-<p>然后测试一下。BingGo</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200307113209.png" alt> </p>
-<p>iPhone手机</p>
-<p>安装好上面对应的客户端如左边图点击添加线路，然后是中间图填写对应的服务ip、端口、密码、加密方式然后保存，之后点击左图的开关按钮；看到手机上出现vpn的图标就成功了，可以随心所欲看视频了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200307113458.png" alt> </p>
-<p>then</p>
-<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200307113504.png" alt> </p>
-<p><code>**next**</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200307113510.png" alt> </p>
-<p><code>Ok  以上就是全部步骤了，赶快去制作属于你们自己的梯子吧！</code></p>
-
-        </div>
-        <!-- .entry-content -->
-        <div class="single-reward">
-          <div class="reward-open">赏
-            <div class="reward-main">
-              <ul class="reward-row">
-                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/custom/donate/AliPayQR.jpg"></li>
-                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/custom/donate/WeChanQR.jpg"></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-        <footer class="post-footer">
-          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-          <div class="post-tags">
-          </div>
-          <div class="post-share">
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer><!-- .entry-footer -->
-      </article>
-      <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
-      <section class="post-squares nextprev">
-        
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2020/03/11/三分钟快速实现二叉树的递归遍历/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/asfs.gif" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/asfs.gif">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                三分钟快速实现二叉树的递归遍历</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/2020/03/06/Java IO体系从原理到应用，这一篇全说清楚了/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200308132305.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200308132305.png">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                Java I/O体系从原理到应用，这一篇全说清楚了</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-      </section>
+      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
+      <i class="fa fa-envira" aria-hidden="true"></i>
+      Discovery</h1>
       
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "aeY1WNVHlNPxnev04uP4OGiN-gzGzoHsz",
-        appKey: "eC65yOIwHWdj1SI18Dc25mV2",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-      })
-  }
-</script>
+  <!-- 首页默认取最最新文章集 -->
+  
+    
+<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
 
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <a href="www.gcweb.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/21.jpg" itemprop="image" alt="耿超" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="www.gcweb.top" itemprop="url" rel="author">耿超</a>
-            </h3>
-          </div>
+  <div class="post-thumb">
+    <a href="/2020/02/24/使用negix转发服务器遇到的问题/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/26.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2020-2-24 15:02</div>
+      <a href="/2020/02/24/使用negix转发服务器遇到的问题/" class="post-title">
+        <h3>使用negix转发服务器遇到的问题</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/技术/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="/2020/02/24/使用negix转发服务器遇到的问题/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
         </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
-      </section>
-    </main><!-- #main -->
-  </div><!-- #primary -->
+      </div>
+    </div>
+  </div>
+</article>
+  
+
+
+    </main>
+      <!-- 首页默认取最最新文章集 -->
+    <!-- 
+      <nav class="navigator">
+        
+        <a class="extend prev" rel="prev" href="/page/2/"><i class="iconfont icon-back"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      </nav>
+     -->
+  </div>
+  
 </div>
-
-
 
     </div>    
     <div class="ins-search">
