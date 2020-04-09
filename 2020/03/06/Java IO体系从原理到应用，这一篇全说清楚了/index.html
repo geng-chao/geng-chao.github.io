@@ -970,7 +970,7 @@ serverBootstrap.bind(port).addListener(future -&gt; {
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
       </div>
-      <p style="color: #666666;">&copy 2018</p>
+      <p style="color: #666666;">&copy 2019</p>
     </div>
     <div class="footer-device">
     <p style="font-family: 'Ubuntu', sans-serif;">
@@ -994,8 +994,8 @@ serverBootstrap.bind(port).addListener(future -&gt; {
             mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
             seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
             snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-            document.getElementById("timeDate").innerHTML = "本站虽每天被经受大量黑客攻击,但因站长技术所向披靡，已风雨兼程,苦苦运行 "+dnum+" 天 ！！";
-            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+            document.getElementById("timeDate").innerHTML = "本站虽每天被经受大量黑客攻击, 但因站长技术所向披靡, 已风雨兼程,苦苦运行 "+dnum+" 天 ";
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 ！！";
             var t =document.getElementById("timeDate");
             var times =document.getElementById("times");
             t.style.color="green";
