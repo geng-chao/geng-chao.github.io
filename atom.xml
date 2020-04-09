@@ -237,7 +237,7 @@
     <link href="http://www.gcblog.vip/2020/03/06/%E4%B8%8D%E4%BD%BF%E7%94%A8synchronized%E5%92%8Clock%EF%BC%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%8D%95%E4%BE%8B%EF%BC%9F/"/>
     <id>http://www.gcblog.vip/2020/03/06/不使用synchronized和lock，如何实现一个线程安全的单例？/</id>
     <published>2020-03-06T10:58:58.000Z</published>
-    <updated>2020-03-13T05:05:42.445Z</updated>
+    <updated>2020-04-09T06:02:16.946Z</updated>
     
     <summary type="html">
     
@@ -248,7 +248,7 @@
       <category term="随想" scheme="http://www.gcblog.vip/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
-      <category term="悦读" scheme="http://www.gcblog.vip/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="图集" scheme="http://www.gcblog.vip/tags/%E5%9B%BE%E9%9B%86/"/>
     
   </entry>
   
