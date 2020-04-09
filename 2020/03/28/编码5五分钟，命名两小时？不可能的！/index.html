@@ -1224,14 +1224,58 @@
 <p>变量名不应以下划线或美元符号开头，尽管这在语法上是允许的。变量名应简短且富于描述。变量名的选用应该易于记忆，即，能够指出其用途。尽量避免单个字符的变量名，除非是一次性的临时变量。pojo中的布尔变量，都不要加is(数据库中的布尔字段全都要加 is_ 前缀)。</p>
 <h3 id="5-2-常量命名"><a href="#5-2-常量命名" class="headerlink" title="5.2 常量命名"></a>5.2 常量命名</h3><p>常量命名CONSTANT_CASE，一般采用全部大写（作为方法参数时除外），单词间用下划线分割。那么什么是常量呢？</p>
 <p>常量是在作用域内保持不变的值，一般使用final进行修饰。一般分为三种，全局常量（public static final修饰），类内常量（private static final 修饰）以及局部常量（方法内，或者参数中的常量），局部常量比较特殊，通常采用小驼峰命名即可。</p>
-<pre><code>/** * 一个demo * * @author Jann Lee * @date 2019-12-07 00:25 **/public class HelloWorld {
-    /**     * 局部常量(正例)     */    public static final long USER_MESSAGE_CACHE_EXPIRE_TIME = 3600;
-      /**     * 局部常量(反例，命名不清晰）     */    public static final long MESSAGE_CACHE_TIME = 3600;
-    /**     * 全局常量     */    private static final String ERROR_MESSAGE = &quot; error message&quot;;
-    /**     * 成员变量     */    private int currentUserId;
-    /**     * 控制台打印 {@code message} 信息     *     * @param message 消息体，局部常量     */    public void sayHello(final String message){        System.out.println(&quot;Hello world!&quot;);    }
+<pre><code class="java">/**
+ * 一个demo
+ *
+ * @author Jann Lee
+ * @date 2019-12-07 00:25
+ **/
+public class HelloWorld {
+
+
+/**
+     * 局部常量(正例)
+     */
+
+public static final long USER_MESSAGE_CACHE_EXPIRE_TIME = 3600;
+
+/**
+     * 局部常量(反例，命名不清晰）
+     */
+
+public static final long MESSAGE_CACHE_TIME =3600;
+
+/**
+     * 全局常量
+     */
+
+private static final String ERROR_MESSAGE =&quot; error message&quot;;
+
+/**
+     * 成员变量
+     */
+
+private
+
+int
+ currentUserId
+;
+
+
+/**
+     * 控制台打印 {@code message} 信息
+     *
+     * @param message 消息体，局部常量
+     */
+
+public void sayHello(final String message){
+        System.out.println(&quot;Hello world!&quot;);
+
 }
-</code></pre><p>常量一般都有自己的业务含义,<strong>不要害怕长度过长而进行省略或者缩写</strong>。如，用户消息缓存过期时间的表示，那种方式更佳清晰，交给你来评判。</p>
+
+}
+</code></pre>
+<p>常量一般都有自己的业务含义,<strong>不要害怕长度过长而进行省略或者缩写</strong>。如，用户消息缓存过期时间的表示，那种方式更佳清晰，交给你来评判。</p>
 <h2 id="通用命名规则"><a href="#通用命名规则" class="headerlink" title="通用命名规则"></a>通用命名规则</h2><ol>
 <li>尽量不要使用拼音；<strong>杜绝拼音和英文混用</strong>。对于一些通用的表示或者难以用英文描述的可以采用拼音，一旦采用拼音就坚决不能和英文混用。正例：BeiJing， HangZhou 反例：validateCanShu</li>
 <li>命名过程中尽量不要出现特殊的字符，常量除外。</li>
@@ -1243,28 +1287,35 @@
 <li>Nothing is strange 没有注解的代码对于阅读者非常不友好，哪怕代码写的在清除，阅读者至少从心理上会有抵触，更何况代码中往往有许多复杂的逻辑，所以一定要写注解，不仅要记录代码的逻辑，还有说清楚修改的逻辑。</li>
 <li>Less is more 从代码维护角度来讲，代码中的注解一定是精华中的精华。合理清晰的命名能让代码易于理解，对于逻辑简单且命名规范，能够清楚表达代码功能的代码不需要注解。滥用注解会增加额外的负担，更何况大部分都是废话。</li>
 </ol>
-<pre><code>// 根据id获取信息【废话注解】getMessageById(id)
-</code></pre><ol>
+<pre><code class="java">// 根据id获取信息【废话注解】getMessageById(id)
+</code></pre>
+<ol>
 <li>Advance with the time 注解应该随着代码的变动而改变，注解表达的信息要与代码中完全一致。通常情况下修改代码后一定要修改注解。</li>
 </ol>
 <h3 id="6-2-注解格式"><a href="#6-2-注解格式" class="headerlink" title="6.2 注解格式"></a>6.2 注解格式</h3><p>注解大体上可以分为两种，一种是javadoc注解，另一种是简单注解。javadoc注解可以生成JavaAPI为外部用户提供有效的支持javadoc注解通常在使用IDEA，或者Eclipse等开发工具时都可以自动生成，也支持自定义的注解模板，仅需要对对应的字段进行解释。参与同一项目开发的同学，尽量设置成相同的注解模板。</p>
 <h4 id="a-包注解"><a href="#a-包注解" class="headerlink" title="a. 包注解"></a>a. 包注解</h4><p>包注解在工作中往往比较特殊，通过包注解可以快速知悉当前包下代码是用来实现哪些功能，强烈建议工作中加上，尤其是对于一些比较复杂的包，包注解一般在包的根目录下，名称统一为package-info.java。</p>
-<pre><code>/** * 落地也质量检测 * 1. 用来解决什么问题 * 对广告主投放的广告落地页进行性能检测，模拟不同的系统，如Android，IOS等; 模拟不同的网络：2G，3G，4G，wifi等 * * 2. 如何实现 * 基于chrome浏览器，用chromedriver驱动浏览器，设置对应的网络，OS参数，获取到浏览器返回结果。 * * 注意：网络环境配置信息{@link cn.mycookies.landingpagecheck.meta.NetWorkSpeedEnum}目前使用是常规速度，可以根据实际情况进行调整 * * @author cruder * @time 2019/12/7 20:3 下午 */package cn.mycookies.landingpagecheck;
-</code></pre><h4 id="b-类注接"><a href="#b-类注接" class="headerlink" title="b. 类注接"></a>b. 类注接</h4><p>javadoc注解中，每个类都必须有注解。</p>
-<pre><code>/*** Copyright (C), 2019-2020, Jann  balabala...** 类的介绍：这是一个用来做什么事情的类，有哪些功能，用到的技术.....** @author   类创建者姓名 保持对齐* @date     创建日期 保持对齐* @version  版本号 保持对齐*/
-</code></pre><h4 id="c-属性注解"><a href="#c-属性注解" class="headerlink" title="c. 属性注解"></a>c. 属性注解</h4><p>在每个属性前面必须加上属性注释，通常有一下两种形式，至于怎么选择，你高兴就好，不过一个项目中要保持统一。</p>
-<pre><code>/** 提示信息 */private String userName;/** * 密码 */private String password;
-</code></pre><h4 id="d-方法注释"><a href="#d-方法注释" class="headerlink" title="d. 方法注释"></a>d. 方法注释</h4><p>在每个方法前面必须加上方法注释，对于方法中的每个参数，以及返回值都要有说明。</p>
-<pre><code>/**  * 方法的详细说明，能干嘛，怎么实现的，注意事项...  *  * @param xxx      参数1的使用说明， 能否为null  * @return 返回结果的说明， 不同情况下会返回怎样的结果  * @throws 异常类型   注明从此类方法中抛出异常的说明  */
-</code></pre><h4 id="e-构造方法注释"><a href="#e-构造方法注释" class="headerlink" title="e. 构造方法注释"></a>e. 构造方法注释</h4><p>在每个构造方法前面必须加上注释，注释模板如下：</p>
-<pre><code>/**  * 构造方法的详细说明  *  * @param xxx      参数1的使用说明， 能否为null  * @throws 异常类型   注明从此类方法中抛出异常的说明  */
-</code></pre><p>而简单注解往往是需要工程师字节定义，在使用注解时应该注意一下几点：</p>
+<pre><code class="java">/** * 落地也质量检测 * 1. 用来解决什么问题 * 对广告主投放的广告落地页进行性能检测，模拟不同的系统，如Android，IOS等; 模拟不同的网络：2G，3G，4G，wifi等 * * 2. 如何实现 * 基于chrome浏览器，用chromedriver驱动浏览器，设置对应的网络，OS参数，获取到浏览器返回结果。 * * 注意：网络环境配置信息{@link cn.mycookies.landingpagecheck.meta.NetWorkSpeedEnum}目前使用是常规速度，可以根据实际情况进行调整 * * @author cruder * @time 2019/12/7 20:3 下午 */package cn.mycookies.landingpagecheck;
+</code></pre>
+<h4 id="b-类注接"><a href="#b-类注接" class="headerlink" title="b. 类注接"></a>b. 类注接</h4><p>javadoc注解中，每个类都必须有注解。</p>
+<pre><code class="java">/*** Copyright (C), 2019-2020, Jann  balabala...** 类的介绍：这是一个用来做什么事情的类，有哪些功能，用到的技术.....** @author   类创建者姓名 保持对齐* @date     创建日期 保持对齐* @version  版本号 保持对齐*/
+</code></pre>
+<h4 id="c-属性注解"><a href="#c-属性注解" class="headerlink" title="c. 属性注解"></a>c. 属性注解</h4><p>在每个属性前面必须加上属性注释，通常有一下两种形式，至于怎么选择，你高兴就好，不过一个项目中要保持统一。</p>
+<pre><code class="java">/** 提示信息 */private String userName;/** * 密码 */private String password;
+</code></pre>
+<h4 id="d-方法注释"><a href="#d-方法注释" class="headerlink" title="d. 方法注释"></a>d. 方法注释</h4><p>在每个方法前面必须加上方法注释，对于方法中的每个参数，以及返回值都要有说明。</p>
+<pre><code class="java">/**  * 方法的详细说明，能干嘛，怎么实现的，注意事项...  *  * @param xxx      参数1的使用说明， 能否为null  * @return 返回结果的说明， 不同情况下会返回怎样的结果  * @throws 异常类型   注明从此类方法中抛出异常的说明  */
+</code></pre>
+<h4 id="e-构造方法注释"><a href="#e-构造方法注释" class="headerlink" title="e. 构造方法注释"></a>e. 构造方法注释</h4><p>在每个构造方法前面必须加上注释，注释模板如下：</p>
+<pre><code class="java">/**  * 构造方法的详细说明  *  * @param xxx      参数1的使用说明， 能否为null  * @throws 异常类型   注明从此类方法中抛出异常的说明  */
+</code></pre>
+<p>而简单注解往往是需要工程师字节定义，在使用注解时应该注意一下几点：</p>
 <ol>
 <li>枚举类的各个属性值都要使用注解，枚举可以理解为是常量，通常不会发生改变，通常会被在多个地方引用，对枚举的修改和添加属性通常会带来很大的影响。</li>
 <li>保持排版整洁，不要使用行尾注释；双斜杠和星号之后要用1个空格分隔。</li>
 </ol>
-<pre><code>int id = 1;// 反例：不要使用行尾注释//反例：换行符与注释之间没有缩进int age = 18;// 正例：姓名String name;/** * 1. 多行注释 * * 2. 对于不同的逻辑说明，可以用空行分隔 */
-</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>无论是命名和注解，他们的目的都是为了让代码和工程师进行对话，增强代码的可读性，可维护性。优秀的代码往往能够见名知意，注解往往是对命名的补充和完善。命名太南了！</p>
+<pre><code class="java">int id = 1;// 反例：不要使用行尾注释//反例：换行符与注释之间没有缩进int age = 18;// 正例：姓名String name;/** * 1. 多行注释 * * 2. 对于不同的逻辑说明，可以用空行分隔 */
+</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>无论是命名和注解，他们的目的都是为了让代码和工程师进行对话，增强代码的可读性，可维护性。优秀的代码往往能够见名知意，注解往往是对命名的补充和完善。</p>
 
         </div>
         <!-- .entry-content -->
@@ -1299,7 +1350,7 @@
           
             <a href="/2020/03/24/开源项目结构/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200304181256.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/20200304181256.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/aab71d2004090a4b723f4f0fc7d9555f.gif" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/geng-chao/PicGo/img/aab71d2004090a4b723f4f0fc7d9555f.gif">
               </div>
               <span class="label">
               Next Post</span>
