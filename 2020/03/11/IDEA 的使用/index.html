@@ -407,12 +407,64 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="日常使用-必备快捷键（★★）"><a href="#日常使用-必备快捷键（★★）" class="headerlink" title="日常使用 必备快捷键（★★）"></a><strong>日常使用 必备快捷键（★★）</strong></h2><h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a><strong>查找</strong></h2><p>快捷键介绍Ctrl + F在当前文件进行文本查找         Ctrl + R在当前文件进行文本替换Shift + Ctrl + F在项目进行文本查找            Shift + Ctrl + R在项目进行文本替换Shift + Shift快速搜索Ctrl + N查找class          Ctrl + Shift + N查找文件                   Ctrl + Shift + Alt + N查找symbol（查找某个方法名）</p>
-<h2 id="跳转切换"><a href="#跳转切换" class="headerlink" title="跳转切换"></a><strong>跳转切换</strong></h2><p>快捷键介绍Ctrl + E最近文件          Ctrl + Tab切换文件          Ctrl + Alt + ←/→跳转历史光标所在处               Alt + ←/→ 方向键切换子tabCtrl + Ggo to（跳转指定行号）</p>
-<h2 id="编码相关"><a href="#编码相关" class="headerlink" title="编码相关"></a><strong>编码相关</strong></h2><p>快捷键介绍Ctrl + W快速选中           (Shift + Ctrl) + Alt + J快速选中同文本         Ctrl + C/Ctrl + X/Ctrl + D快速复制或剪切多行选中            Tab / Shift + TabtabCtrl + Y删除整行滚轮点击变量/方法/类快速进入变量/方法/类的定义处            Shift + 点击Tab快速关闭tabCtrl + Z 、Ctrl + Shift + Z后悔药，      撤销/取消撤销Ctrl + Shift + enter自动收尾，           代码自动补全Alt + enterIntelliJ IDEA 根据光标所在问题，提供快速修复选择，光标放在的位置不同提示的结果也不同Alt + ↑/↓方法快速跳转F2跳转到下一个高亮错误 或 警告位置Alt + Insert代码自动生成，如生成对象的 set / get 方法，构造函数，toString() 等             Ctrl + Shift + L 格式化代码                     Shift + F6快速修改方法名、变量名、文件名、类名等Ctrl + F6快速修改方法签名</p>
-<h2 id="代码阅读相关"><a href="#代码阅读相关" class="headerlink" title="代码阅读相关"></a><strong>代码阅读相关</strong></h2><p>快捷键介绍Ctrl + P方法参数提示显示          Ctrl + Shift + i就可以在当前类里再弹出一个窗口出来              Alt + F7可以列出变量在哪些地方被使用了光标在子类接口名，             trl + u跳到父类接口Alt + F1 + 1， esc</p>
-<p>(Shift) + Ctrl + +/-代码块折叠Ctrl + Shift + ←/→移动窗口分割线                  Ctrl + (Alt) + B跳转方法定义/实现                  Ctrl + H类的层级关系Ctrl + F12Show Members 类成员快速显示</p>
-<h2 id="版本管理相关"><a href="#版本管理相关" class="headerlink" title="版本管理相关"></a><strong>版本管理相关</strong></h2><p>快捷键介绍Ctrl + DShow Diff(Shift) + F7（上）下一处修改</p>
+          <p><strong>*1***</strong>. 查找类的快捷键**</p>
+<p>双击Shift：查找任何内容</p>
+<p>Ctrl+F：在当前文件夹中查找</p>
+<p>Ctrl+Shift+F：在项目或指定窗口中查找</p>
+<p>Ctrl+N：在项目中查找类</p>
+<p>Ctrl+Shift+N：查找文件</p>
+<p>Ctrl+R：在当前文件中文本替换</p>
+<p>Ctrl+Shift+R：在指定窗口中文本替换</p>
+<p>Ctrl+G：快速定位行</p>
+<p>Ctrl+Alt+左右键：跳转到前后编辑过的位置</p>
+<p>Ctrl+Shift+退格键：跳转到上一次编辑位置</p>
+<p>Ctrl+Shift+Alt+N：查找变量或者方法</p>
+<p>Alt+F7：查找变量、方法或者类被引用的地方</p>
+<p>Alt+F3：高亮显示选中文本，Enter键跳转到下一个，Esc退出</p>
+<p><strong>*2***</strong>. 编辑类的快捷键**</p>
+<p>psvm+Tab：生成main方法</p>
+<p>sout+Tab：生成输出语句</p>
+<p>Ctrl+Y：删除当前行</p>
+<p>Ctrl+D：复制当前行</p>
+<p>Ctrl+Z：撤销</p>
+<p>Ctrl+Shift+Z：还原撤销</p>
+<p>Ctrl+O：重写方法</p>
+<p>Ctrl+Shift+U：大小写转化</p>
+<p>Ctrl+Shift+J：整合两行为一行</p>
+<p>Alt+回车：自动修正</p>
+<p>Alt+/：代码提示</p>
+<p>Ctrl+Alt+L：格式化代码</p>
+<p>Ctrl+Alt+T：生成try catch</p>
+<p>Ctrl+Alt+O：优化导入的包</p>
+<p>fori：生成for循环</p>
+<p>iter：生成增强for循环</p>
+<p><strong>3. 调试类的快捷键</strong></p>
+<p>Ctrl+F9：编译项目</p>
+<p>Ctrl+Shift+F9：编译当前文件</p>
+<p>Shift+F10：正常启动项目</p>
+<p>Shift+F9：debug模式启动</p>
+<p>Alt+Shift+F10：弹出Run可选菜单</p>
+<p>Alt+Shift+F9：选择debug</p>
+<p><strong>*4***</strong>. debug相关快捷键<strong>**</strong></p>
+<p>进入debug模式后，一些常用快捷键如下：</p>
+<p>F7：进入方法内</p>
+<p>F8：直接执行该方法（不进入）</p>
+<p>F9：直接执行到下一个断点</p>
+<p>Alt+F8：选中查看值（很有用）</p>
+<p>Ctrl+Shift+F8：查看断点</p>
+<p>Alt+F9：运行至光标位置</p>
+<p>Alt+F10：定位到断点</p>
+<p><strong>*5***</strong>. 其他比较常用的快捷键**</p>
+<p>当然了，除了上面比较常用的快捷键外，还有些也是很常见的，我单独拎了出来。</p>
+<p>Ctrl+Shift+C：复制文件的完整路径</p>
+<p>Ctrl+E：显示最近打开的文件</p>
+<p>Ctrl+P：方法参数提示</p>
+<p>Ctrl+Q：当前方法的声明/注释文档</p>
+<p>Ctrl+Alt+空格：类名或者接口名提示</p>
+<p>Ctrl+H：显示当前类的结构图</p>
+<p>Ctrl+[：光标移动到当前所在代码花括号开始位置</p>
+<p>Ctrl+]：光标移动到当前所在代码花括号结束位置</p>
+<p>IDEA的快捷键非常多，以上这些是平时写代码的过程中用的比较多的，</p>
 
         </div>
         <!-- .entry-content -->

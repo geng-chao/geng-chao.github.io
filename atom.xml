@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.gcblog.vip/"/>
-  <updated>2020-03-28T10:51:11.317Z</updated>
+  <updated>2020-04-09T01:45:49.932Z</updated>
   <id>http://www.gcblog.vip/</id>
   
   <author>
@@ -17,25 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>1</title>
-    <link href="http://www.gcblog.vip/2020/03/28/1/"/>
-    <id>http://www.gcblog.vip/2020/03/28/1/</id>
+    <title>编码5五分钟，命名两小时？不可能的！</title>
+    <link href="http://www.gcblog.vip/2020/03/28/%E7%BC%96%E7%A0%815%E4%BA%94%E5%88%86%E9%92%9F%EF%BC%8C%E5%91%BD%E5%90%8D%E4%B8%A4%E5%B0%8F%E6%97%B6%EF%BC%9F%E4%B8%8D%E5%8F%AF%E8%83%BD%E7%9A%84%EF%BC%81/"/>
+    <id>http://www.gcblog.vip/2020/03/28/编码5五分钟，命名两小时？不可能的！/</id>
     <published>2020-03-28T10:50:06.000Z</published>
-    <updated>2020-03-28T10:51:11.317Z</updated>
+    <updated>2020-04-09T01:45:49.932Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/geng-chao/sp@1.0/j.mp4&quot; alt&gt;
-        
-      
+      java命名规范
     
     </summary>
     
-      <category term="技术" scheme="http://www.gcblog.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="java" scheme="http://www.gcblog.vip/categories/java/"/>
     
     
   </entry>
@@ -153,7 +147,7 @@
     <link href="http://www.gcblog.vip/2020/03/11/IDEA%20%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.gcblog.vip/2020/03/11/IDEA 的使用/</id>
     <published>2020-03-11T07:11:40.000Z</published>
-    <updated>2020-03-22T00:33:00.694Z</updated>
+    <updated>2020-04-09T01:47:23.747Z</updated>
     
     <summary type="html">
     
@@ -315,25 +309,19 @@
   </entry>
   
   <entry>
-    <title>2</title>
-    <link href="http://www.gcblog.vip/2020/02/29/%E9%94%81/"/>
-    <id>http://www.gcblog.vip/2020/02/29/锁/</id>
+    <title>接口调用demo</title>
+    <link href="http://www.gcblog.vip/2020/02/29/%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8demo/"/>
+    <id>http://www.gcblog.vip/2020/02/29/接口调用demo/</id>
     <published>2020-02-29T11:14:32.000Z</published>
-    <updated>2020-03-04T11:23:06.026Z</updated>
+    <updated>2020-04-09T01:53:41.099Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;font face=&quot;黑体&quot; color=&quot;green&quot;
-        
-      
+      接口调用
     
     </summary>
     
-      <category term="技术" scheme="http://www.gcblog.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="java" scheme="http://www.gcblog.vip/categories/java/"/>
     
     
   </entry>
