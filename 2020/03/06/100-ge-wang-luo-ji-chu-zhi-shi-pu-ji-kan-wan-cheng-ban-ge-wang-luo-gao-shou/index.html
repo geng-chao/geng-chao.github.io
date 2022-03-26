@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html>
+  <!-- meta/link... -->
+  
+
+
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <title>100 个网络基础知识普及，看完成半个网络高手！ | BigBoss</title>
+
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/blog/favicon.ico">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://cdn.jsdelivr.net/gh/inkss/fontawesome@5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="/blog/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
+  
+  
+    <script>
+        var themeModelId = '3';
+        if (themeModelId) {
+            localStorage.setItem('modelId', themeModelId);
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
+    <script>
+        var live2dOpen = eval('true') || false;
+        if (!live2dOpen) {
+            localStorage.setItem('waifu-display', 1609323474481);
+        }
+    </script>
+  
+  
+  
+<link rel="stylesheet" href="/blog/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/blog/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/blog/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+    
+        <script src="/blog/js/valine/av-min@3.0.4.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+    
+
+    <!-- import link -->
+    
+        
+            
+        
+            
+        
+    
+    <!-- import script -->
+    
+        
+            
+        
+            
+        
+    
+
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/blog/atom.xml" title="BigBoss" type="application/atom+xml">
+</head>
+
+  
+  <!-- 依赖于jquery和vue -->
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+  
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+
+  
+  
+  <body>
+    <!-- 预加载动画 -->
+    <!-- 页面预加载动画 -->
+
+<div id='loader'>
+  <link rel="stylesheet" href="/blog/js/loaded/index.css" >
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="configure-border-1">
+      <div class="configure-core"></div>
+    </div>
+    <div class="configure-border-2">
+      <div class="configure-core"></div>
+    </div>
+    <div class="loading-word">loading...</div>
+  </div>
+</div>
+
+<script>
+  var endLoading = function () {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('DOMContentLoaded',endLoading);
+  
+</script>
+
+    
+    <!-- 判断是否为暗黑风格 -->
+    <!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script>
+
+    <!-- 需要在上面加载的js -->
+    <script>
+  function loadScript(src, cb) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+
+  //https://github.com/filamentgroup/loadCSS
+  var loadCSS = function (href, before, media, attributes) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    });
+  };
+
+</script> 
+
+<!-- 轮播图所需要的js -->
+<script src="/blog/js/swiper/swiper.min.js"></script>
+<script src="/blog/js/swiper/vue-awesome-swiper.js"></script>
+<script src="/blog/js/swiper/swiper.animate1.0.3.min.js"></script>
+
+<script type="text/javascript">
+  Vue.use(window.VueAwesomeSwiper)
+</script>
+
+
+  <script src="/blog/js/vue-typed-js/index.js"></script>
+
+
+<!-- 首页的公告滚动插件的js需要重新加载 -->
+<script src="/blog/js/vue-seamless-scroll/index.js"></script>
+
+<!-- 打字机效果js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+
+    <div id="safearea">
+      <main class="main" id="pjax-container">
+        <!-- 头部导航 -->
+        
+<header class="header   " 
+  id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <div class="drawer-box-icon">
+    <i class="fas fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  </div>
+  
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo lazyload placeholder" src="/blog/medias/logo.png" class="lazyload placeholder" data-srcset="/blog/medias/logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="logo">
+      <h3 class="drawer-box-head_title">BigBoss</h3>
+      <h5 class="drawer-box-head_desc">千磨万击还坚劲，任尔东西南北风</h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/blog/" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">Home</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/blog/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">Archives</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/blog/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">Tags</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/blog/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">Categories</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/blog/about" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">About</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/blog/friends" class="drawer-menu-item-link">
+                  
+                  <span class="name">Friends</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fas fa-link"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/blog/gallery">
+                      
+                      <i class="fas fa-music" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/blog/huoban">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>友情连接</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/blog/me">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>关于我</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+        
+          <li class="drawer-box-content_item">
+            <a target="_blank" rel="noopener" href="https://github.com/geng-chao">
+              <i class="fas fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/blog/medias/logo.png" class="lazyload placeholder" data-srcset="/blog/medias/logo.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="logo">
+        </div>
+      
+      <a href="/blog/" class="logo">BigBoss</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/blog/" class="menu-item-link" title="Home">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">Home</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/blog/archives" class="menu-item-link" title="Archives">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">Archives</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/blog/tags" class="menu-item-link" title="Tags">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">Tags</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/blog/categories" class="menu-item-link" title="Categories">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">Categories</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/blog/about" class="menu-item-link" title="About">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">About</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/blog/friends" class="menu-item-link" title="Friends">
+                  
+                  <span class="name">Friends</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="更多">
+                  
+                    <i class="fas fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/blog/gallery">
+                      
+                      <i class="fas fa-music" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/blog/huoban">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>友情连接</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/blog/me">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>关于我</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
+        
+      </ul>
+      
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fas fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <h2>
+          <span>
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <span class="title">Search</span>
+          </span>
+          <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="Please enter keywords"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+<script src="/blog/js/local_search.js"></script>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+      window.addEventListener('pjax:complete', () => {
+        this.cancelDialogVisible();
+      })
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/blog/search.xml");
+        }
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+    <a target="_blank" rel="noopener" href="https://github.com/geng-chao" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+</header>
+        <!-- 内容区域 -->
+        
+ <!-- prismjs 代码高亮 -->
+ 
+    
+    <link href="/blog/js/prism/prism-line-numbers.css" rel="stylesheet">
+    
+        <link href="/blog/js/prism/prism-dark.min.css" rel="stylesheet">
+    
+
+    <style>
+        pre[class*="language-"] {
+            overflow-y: hidden;
+        }
+        .line-numbers .line-numbers-rows {
+            border: none;
+        }
+    </style>
+  
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/blog/medias/15.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        100 个网络基础知识普及，看完成半个网络高手！
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> Published in：2020-03-06 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> category：
+          
+            <a href="/blog/categories/%E8%BD%AC%E8%BD%BD/" class="post-detail-header_category">
+              转载
+            </a>
+          
+        </span>
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> Words: 6.1k |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> Reading time: 21min |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fas fa-eye"></i> reading：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
+    
+  </div>
+  
+  
+    <script src="/blog/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+
+
+<div class="row justify-position" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <p>100 个网络基础知识普及，看完成半个网络高手！</p>
+<h3 id="1）什么是链接？"><a href="#1）什么是链接？" class="headerlink" title="1）什么是链接？"></a>1）什么是链接？</h3><p>链接是指两个设备之间的连接。它包括用于一个设备能够与另一个设备通信的电缆类型和协议。</p>
+<h3 id="2）OSI-参考模型的层次是什么？"><a href="#2）OSI-参考模型的层次是什么？" class="headerlink" title="2）OSI 参考模型的层次是什么？"></a>2）OSI 参考模型的层次是什么？</h3><p>有 7 个 OSI 层：物理层，数据链路层，网络层，传输层，会话层，表示层和应用层。</p>
+<h3 id="3）什么是骨干网？"><a href="#3）什么是骨干网？" class="headerlink" title="3）什么是骨干网？"></a>3）什么是骨干网？</h3><p>骨干网络是集中的基础设施，旨在将不同的路由和数据分发到各种网络。它还处理带宽管理和各种通道。</p>
+<h3 id="4）什么是-LAN？"><a href="#4）什么是-LAN？" class="headerlink" title="4）什么是 LAN？"></a>4）什么是 LAN？</h3><p>LAN 是局域网的缩写。它是指计算机与位于小物理位置的其他网络设备之间的连接。</p>
+<h3 id="5）什么是节点？"><a href="#5）什么是节点？" class="headerlink" title="5）什么是节点？"></a>5）什么是节点？</h3><p>节点是指连接发生的点。它可以是作为网络一部分的计算机或设备。为了形成网络连接，需要两个或更多个节点。</p>
+<h3 id="6）什么是路由器？"><a href="#6）什么是路由器？" class="headerlink" title="6）什么是路由器？"></a>6）什么是路由器？</h3><p>路由器可以连接两个或更多网段。这些是在其路由表中存储信息的智能网络设备，例如路径，跳数等。有了这个信息，他们就可以确定数据传输的最佳路径。路由器在 OSI 网络层运行。</p>
+<h3 id="7）什么是点对点链接？"><a href="#7）什么是点对点链接？" class="headerlink" title="7）什么是点对点链接？"></a>7）什么是点对点链接？</h3><p>它是指网络上两台计算机之间的直接连接。除了将电缆连接到两台计算机的 NIC卡之外，点对点连接不需要任何其他网络设备。</p>
+<h3 id="8）什么是匿名-FTP？"><a href="#8）什么是匿名-FTP？" class="headerlink" title="8）什么是匿名 FTP？"></a>8）什么是匿名 FTP？</h3><p>匿名 FTP 是授予用户访问公共服务器中的文件的一种方式。允许访问这些服务器中的数据的用户不需要识别自己，而是以匿名访客身份登录。</p>
+<h3 id="9）什么是子网掩码？"><a href="#9）什么是子网掩码？" class="headerlink" title="9）什么是子网掩码？"></a>9）什么是子网掩码？</h3><p>子网掩码与 IP 地址组合，以识别两个部分：扩展网络地址和主机地址。像 IP 地址一样，子网掩码由 32 位组成。</p>
+<h3 id="10）UTP-电缆允许的最大长度是多少？"><a href="#10）UTP-电缆允许的最大长度是多少？" class="headerlink" title="10）UTP 电缆允许的最大长度是多少？"></a>10）UTP 电缆允许的最大长度是多少？</h3><p>UTP 电缆的单段具有 90 到 100 米的允许长度。这种限制可以通过使用中继器和开关来克服</p>
+<h3 id="11）什么是数据封装？"><a href="#11）什么是数据封装？" class="headerlink" title="11）什么是数据封装？"></a>11）什么是数据封装？</h3><p>数据封装是在通过网络传输信息之前将信息分解成更小的可管理块的过程。在这个过程中，源和目标地址与奇偶校验一起附加到标题中。</p>
+<h3 id="12）描述网络拓扑"><a href="#12）描述网络拓扑" class="headerlink" title="12）描述网络拓扑"></a>12）描述网络拓扑</h3><p>网络拓扑是指计算机网络的布局。它显示了设备和电缆的物理布局，以及它们如何连接到彼此。</p>
+<h3 id="13）什么是-VPN？"><a href="#13）什么是-VPN？" class="headerlink" title="13）什么是 VPN？"></a>13）什么是 VPN？</h3><p>VPN 意味着虚拟专用网络，这种技术允许通过网络（如 Internet）创建安全通道。</p>
+<p>例如，VPN 允许您建立到远程服务器的安全拨号连接。</p>
+<h3 id="14）简要描述-NAT。"><a href="#14）简要描述-NAT。" class="headerlink" title="14）简要描述 NAT。"></a>14）简要描述 NAT。</h3><p>NAT 是网络地址转换。这是一种协议，为公共网络上的多台计算机提供一种方式来共享到 Internet 的单一连接。</p>
+<h3 id="15）OSI-参考模型下网络层的工作是什么？"><a href="#15）OSI-参考模型下网络层的工作是什么？" class="headerlink" title="15）OSI 参考模型下网络层的工作是什么？"></a>15）OSI 参考模型下网络层的工作是什么？</h3><p>网络层负责数据路由，分组交换和网络拥塞控制。路由器在此层下运行。</p>
+<h3 id="16）网络拓扑如何影响您在建立网络时的决策？"><a href="#16）网络拓扑如何影响您在建立网络时的决策？" class="headerlink" title="16）网络拓扑如何影响您在建立网络时的决策？"></a>16）网络拓扑如何影响您在建立网络时的决策？</h3><p>网络拓扑决定了互连设备必须使用什么媒介。它还作为适用于设置的材料，连接器和终端的基础。</p>
+<h3 id="17）什么是-RIP？"><a href="#17）什么是-RIP？" class="headerlink" title="17）什么是 RIP？"></a>17）什么是 RIP？</h3><p>RIP，路由信息协议的简称由路由器用于将数据从一个网络发送到另一个网络。</p>
+<p>它通过将其路由表广播到网络中的所有其他路由器来有效地管理路由数据。它以跳数为单位确定网络距离。</p>
+<h3 id="18）什么是不同的方式来保护计算机网络？"><a href="#18）什么是不同的方式来保护计算机网络？" class="headerlink" title="18）什么是不同的方式来保护计算机网络？"></a>18）什么是不同的方式来保护计算机网络？</h3><p>有几种方法可以做到这一点。在所有计算机上安装可靠和更新的防病毒程序。确保防火墙的设置和配置正确。用户认证也将有很大的帮助。所有这些组合将构成一个高度安全的网络。</p>
+<h3 id="19）什么是-NIC？"><a href="#19）什么是-NIC？" class="headerlink" title="19）什么是 NIC？"></a>19）什么是 NIC？</h3><p>NIC 是网络接口卡（网卡）的缩写。这是连接到 PC 以连接到网络沈北。每个 NIC都有自己的 MAC 地址，用于标识网络上的 PC。</p>
+<h3 id="20）什么是-WAN？"><a href="#20）什么是-WAN？" class="headerlink" title="20）什么是 WAN？"></a>20）什么是 WAN？</h3><p>WAN 代表广域网。它是地理上分散的计算机和设备的互连。它连接位于不同地区和国家&#x2F;地区的网络。</p>
+<h3 id="21）OSI-物理层的重要性是什么？"><a href="#21）OSI-物理层的重要性是什么？" class="headerlink" title="21）OSI 物理层的重要性是什么？"></a>21）OSI 物理层的重要性是什么？</h3><p>物理层进行从数据位到电信号的转换，反之亦然。这是网络设备和电缆类型的考虑和设置。</p>
+<h3 id="22）TCP-x2F-IP-下有多少层？"><a href="#22）TCP-x2F-IP-下有多少层？" class="headerlink" title="22）TCP&#x2F;IP 下有多少层？"></a>22）TCP&#x2F;IP 下有多少层？</h3><p>有四层：网络层，互联网层，传输层和应用层。</p>
+<h3 id="23）什么是代理服务器，它们如何保护计算机网络？"><a href="#23）什么是代理服务器，它们如何保护计算机网络？" class="headerlink" title="23）什么是代理服务器，它们如何保护计算机网络？"></a>23）什么是代理服务器，它们如何保护计算机网络？</h3><p>代理服务器主要防止外部用户识别内部网络的 IP 地址。不知道正确的 IP 地址，甚至无法识别网络的物理位置。代理服务器可以使外部用户几乎看不到网络。</p>
+<h3 id="24）OSI-会话层的功能是什么？"><a href="#24）OSI-会话层的功能是什么？" class="headerlink" title="24）OSI 会话层的功能是什么？"></a>24）OSI 会话层的功能是什么？</h3><p>该层为网络上的两个设备提供协议和方法，通过举行会话来相互通信。这包括设置会话，管理会话期间的信息交换以及终止会话时的解除过程。</p>
+<h3 id="25）实施容错系统的重要性是什么？有限吗？"><a href="#25）实施容错系统的重要性是什么？有限吗？" class="headerlink" title="25）实施容错系统的重要性是什么？有限吗？"></a>25）实施容错系统的重要性是什么？有限吗？</h3><p>容错系统确保持续的数据可用性。这是通过消除单点故障来实现的。但是，在某些情况下，这种类型的系统将无法保护数据，例如意外删除。</p>
+<h3 id="26）10Base-T-是什么意思？"><a href="#26）10Base-T-是什么意思？" class="headerlink" title="26）10Base-T 是什么意思？"></a>26）10Base-T 是什么意思？</h3><p>10 是指数据传输速率，在这种情况下是 10Mbps。“Base”是指基带。T 表示双绞线，这是用于该网络的电缆。</p>
+<h3 id="27）什么是私有-IP-地址？"><a href="#27）什么是私有-IP-地址？" class="headerlink" title="27）什么是私有 IP 地址？"></a>27）什么是私有 IP 地址？</h3><p>专用 IP 地址被分配用于内部网。这些地址用于内部网络，不能在外部公共网络上路由。这些确保内部网络之间不存在任何冲突，同时私有 IP 地址的范围同样可重复使用于多个内部网络，因为它们不会“看到”彼此。</p>
+<h3 id="28）什么是-NOS？"><a href="#28）什么是-NOS？" class="headerlink" title="28）什么是 NOS？"></a>28）什么是 NOS？</h3><p>NOS 或网络操作系统是专门的软件，其主要任务是向计算机提供网络连接，以便能够与其他计算机和连接的设备进行通信。</p>
+<h3 id="29）什么是-DoS？"><a href="#29）什么是-DoS？" class="headerlink" title="29）什么是 DoS？"></a>29）什么是 DoS？</h3><p>DoS 或拒绝服务攻击是试图阻止用户访问互联网或任何其他网络服务。这种攻击可能有不同的形式，由一群永久者组成。这样做的一个常见方法是使系统服务器过载，使其无法再处理合法流量，并将被强制重置。</p>
+<h3 id="30）什么是-OSI，它在电脑网络中扮演什么角色？"><a href="#30）什么是-OSI，它在电脑网络中扮演什么角色？" class="headerlink" title="30）什么是 OSI，它在电脑网络中扮演什么角色？"></a>30）什么是 OSI，它在电脑网络中扮演什么角色？</h3><p>OSI（开放系统互连）作为数据通信的参考模型。它由 7 层组成，每层定义了网络设备如何相互连接和通信的特定方面。一层可以处理所使用的物理介质，而另一层则指示如何通过网络实际传输数据。</p>
+<h3 id="31）电缆被屏蔽并具有双绞线的目的是什么？"><a href="#31）电缆被屏蔽并具有双绞线的目的是什么？" class="headerlink" title="31）电缆被屏蔽并具有双绞线的目的是什么？"></a>31）电缆被屏蔽并具有双绞线的目的是什么？</h3><p>其主要目的是防止串扰。串扰是电磁干扰或噪声，可能影响通过电缆传输的数据。</p>
+<h3 id="32）地址共享的优点是什么？"><a href="#32）地址共享的优点是什么？" class="headerlink" title="32）地址共享的优点是什么？"></a>32）地址共享的优点是什么？</h3><p>通过使用地址转换而不是路由，地址共享提供了固有的安全性优势。这是因为互联网上的主机只能看到提供地址转换的计算机上的外部接口的公共 IP 地址，而不是内部网络上的私有 IP 地址。</p>
+<h3 id="33）什么是-MAC-地址？"><a href="#33）什么是-MAC-地址？" class="headerlink" title="33）什么是 MAC 地址？"></a>33）什么是 MAC 地址？</h3><p>MAC 或媒介访问控制，可以唯一地标识网络上的设备。它也被称为物理地址或以太网地址。MAC 地址由 6 个字节组成。</p>
+<h3 id="34）在-OSI-参考模型方面，TCP-x2F-IP-应用层的等同层或多层是什么？"><a href="#34）在-OSI-参考模型方面，TCP-x2F-IP-应用层的等同层或多层是什么？" class="headerlink" title="34）在 OSI 参考模型方面，TCP&#x2F;IP 应用层的等同层或多层是什么？"></a>34）在 OSI 参考模型方面，TCP&#x2F;IP 应用层的等同层或多层是什么？</h3><h3 id="TCP-x2F-IP-应用层实际上在-OSI-模型上具有三个对等体：会话层，表示层和应用层。"><a href="#TCP-x2F-IP-应用层实际上在-OSI-模型上具有三个对等体：会话层，表示层和应用层。" class="headerlink" title="TCP&#x2F;IP 应用层实际上在 OSI 模型上具有三个对等体：会话层，表示层和应用层。"></a>TCP&#x2F;IP 应用层实际上在 OSI 模型上具有三个对等体：会话层，表示层和应用层。</h3><h3 id="35）如何识别给定-IP-地址的-IP-类？"><a href="#35）如何识别给定-IP-地址的-IP-类？" class="headerlink" title="35）如何识别给定 IP 地址的 IP 类？"></a>35）如何识别给定 IP 地址的 IP 类？</h3><p>通过查看任何给定 IP 地址的第一个八位字节，您可以识别它是 A 类，B 类还是 C类。如果第一个八位字节以 0 位开头，则该地址为 Class A.如果以位 10 开头，则该地址为 B 类地址。如果从 110 开始，那么它是 C 类网络。</p>
+<h3 id="36）OSPF-的主要目的是什么？"><a href="#36）OSPF-的主要目的是什么？" class="headerlink" title="36）OSPF 的主要目的是什么？"></a>36）OSPF 的主要目的是什么？</h3><p>OSPF 或开放最短路径优先，是使用路由表确定数据交换的最佳路径的链路状态路由协议。</p>
+<h3 id="37）什么是防火墙？"><a href="#37）什么是防火墙？" class="headerlink" title="37）什么是防火墙？"></a>37）什么是防火墙？</h3><p>防火墙用于保护内部网络免受外部攻击。这些外部威胁可能是黑客谁想要窃取数据或计算机病毒，可以立即消除数据。它还可以防止来自外部网络的其他用户访问专用网络。</p>
+<h3 id="38）描述星形拓扑"><a href="#38）描述星形拓扑" class="headerlink" title="38）描述星形拓扑"></a>38）描述星形拓扑</h3><p>星形拓扑由连接到节点的中央集线器组成。这是最简单的设置和维护之一。</p>
+<h3 id="39）什么是网关？"><a href="#39）什么是网关？" class="headerlink" title="39）什么是网关？"></a>39）什么是网关？</h3><p>网关提供两个或多个网段之间的连接。它通常是运行网关软件并提供翻译服务的计算机。该翻译是允许不同系统在网络上通信的关键。</p>
+<h3 id="40）星型拓扑的缺点是什么？"><a href="#40）星型拓扑的缺点是什么？" class="headerlink" title="40）星型拓扑的缺点是什么？"></a>40）星型拓扑的缺点是什么？</h3><p>星形拓扑的一个主要缺点是，一旦中央集线器或交换机被损坏，整个网络就变得不可用了。</p>
+<h3 id="41）什么是-SLIP？"><a href="#41）什么是-SLIP？" class="headerlink" title="41）什么是 SLIP？"></a>41）什么是 SLIP？</h3><p>SLIP 或串行线路接口协议实际上是在 UNIX 早期开发的旧协议。这是用于远程访问的协议之一。</p>
+<h3 id="42）给出一些私有网络地址的例子。"><a href="#42）给出一些私有网络地址的例子。" class="headerlink" title="42）给出一些私有网络地址的例子。"></a>42）给出一些私有网络地址的例子。</h3><p>10.0.0.0，子网掩码为 255.0.0.0</p>
+<p>172.16.0.0，子网掩码为 255.240.0.0</p>
+<p>千人ccie认证交流群463904693</p>
+<p>领取最新CCIE考试题库</p>
+<p>CCIE 认证经验分享千人群：463904693</p>
+<p>192.168.0.0，子网掩码为 255.255.0.0</p>
+<h3 id="43）什么是-tracert？"><a href="#43）什么是-tracert？" class="headerlink" title="43）什么是 tracert？"></a>43）什么是 tracert？</h3><p>Tracert 是一个 Windows 实用程序，可用于跟踪从路由器到目标网络的数据采集的路由。它还显示了在整个传输路由期间采用的跳数。</p>
+<h3 id="44）网络管理员的功能是什么？"><a href="#44）网络管理员的功能是什么？" class="headerlink" title="44）网络管理员的功能是什么？"></a>44）网络管理员的功能是什么？</h3><p>网络管理员有许多责任，可以总结为 3 个关键功能：安装网络，配置网络设置以及网络的维护&#x2F;故障排除。</p>
+<h3 id="45）描述对等网络的一个缺点。"><a href="#45）描述对等网络的一个缺点。" class="headerlink" title="45）描述对等网络的一个缺点。"></a>45）描述对等网络的一个缺点。</h3><p>当您正在访问由网络上的某个工作站共享的资源时，该工作站的性能会降低。</p>
+<h3 id="46）什么是混合网络？"><a href="#46）什么是混合网络？" class="headerlink" title="46）什么是混合网络？"></a>46）什么是混合网络？</h3><p>混合网络是利用客户端 - 服务器和对等体系结构的网络设置。</p>
+<h3 id="47）什么是-DHCP？"><a href="#47）什么是-DHCP？" class="headerlink" title="47）什么是 DHCP？"></a>47）什么是 DHCP？</h3><p>DHCP 是动态主机配置协议的缩写。其主要任务是自动为网络上的设备分配 IP 地址。它首先检查任何设备尚未占用的下一个可用地址，然后将其分配给网络设备。</p>
+<h3 id="48）ARP-的主要工作是什么？"><a href="#48）ARP-的主要工作是什么？" class="headerlink" title="48）ARP 的主要工作是什么？"></a>48）ARP 的主要工作是什么？</h3><p>ARP 或地址解析协议的主要任务是将已知的 IP 地址映射到 MAC 层地址。</p>
+<h3 id="49）什么是-TCP-x2F-IP？"><a href="#49）什么是-TCP-x2F-IP？" class="headerlink" title="49）什么是 TCP&#x2F;IP？"></a>49）什么是 TCP&#x2F;IP？</h3><p>TCP&#x2F;IP 是传输控制协议&#x2F;互联网协议的缩写。这是一组协议层，旨在在不同类型的计算机网络（也称为异构网络）上进行数据交换。</p>
+<h3 id="50）如何使用路由器管理网络？"><a href="#50）如何使用路由器管理网络？" class="headerlink" title="50）如何使用路由器管理网络？"></a>50）如何使用路由器管理网络？</h3><p>路由器内置了控制台，可让您配置不同的设置，如安全和数据记录。您可以为计算机分配限制，例如允许访问的资源，或者可以浏览互联网的某一天的特定时间。</p>
+<p>您甚至可以对整个网络中看不到的网站施加限制。</p>
+<h3 id="51）当您希望在不同平台（如-UNIX-系统和-Windows-服务器之间）传输文件时，可以应用什么协议？"><a href="#51）当您希望在不同平台（如-UNIX-系统和-Windows-服务器之间）传输文件时，可以应用什么协议？" class="headerlink" title="51）当您希望在不同平台（如 UNIX 系统和 Windows 服务器之间）传输文件时，可以应用什么协议？"></a>51）当您希望在不同平台（如 UNIX 系统和 Windows 服务器之间）传输文件时，可以应用什么协议？</h3><p>使用 FTP（文件传输协议）在这些不同的服务器之间进行文件传输。这是可能的，因为 FTP 是平台无关的。</p>
+<h3 id="52）默认网关的使用是什么？"><a href="#52）默认网关的使用是什么？" class="headerlink" title="52）默认网关的使用是什么？"></a>52）默认网关的使用是什么？</h3><p>默认网关提供了本地网络连接到外部网络的方法。用于连接外部网络的默认网关通常是外部路由器端口的地址。</p>
+<h3 id="53）保护网络的一种方法是使用密码。什么可以被认为是好的密码？"><a href="#53）保护网络的一种方法是使用密码。什么可以被认为是好的密码？" class="headerlink" title="53）保护网络的一种方法是使用密码。什么可以被认为是好的密码？"></a>53）保护网络的一种方法是使用密码。什么可以被认为是好的密码？</h3><p>良好的密码不仅由字母组成，还包括字母和数字的组合。结合大小写字母的密码比使用所有大写字母或全部小写字母的密码有利。密码必须不能被黑客很容易猜到，比如日期，姓名，收藏夹等等。</p>
+<h3 id="54）UTP-电缆的正确终止率是多少？"><a href="#54）UTP-电缆的正确终止率是多少？" class="headerlink" title="54）UTP 电缆的正确终止率是多少？"></a>54）UTP 电缆的正确终止率是多少？</h3><p>非屏蔽双绞线网线的正常终止是 100 欧姆。</p>
+<h3 id="55）什么是-netstat？"><a href="#55）什么是-netstat？" class="headerlink" title="55）什么是 netstat？"></a>55）什么是 netstat？</h3><p>Netstat 是一个命令行实用程序。它提供有关连接当前 TCP&#x2F;IP 设置的有用信息。</p>
+<h3 id="56）C-类网络中的网络-ID-数量是多少？"><a href="#56）C-类网络中的网络-ID-数量是多少？" class="headerlink" title="56）C 类网络中的网络 ID 数量是多少？"></a>56）C 类网络中的网络 ID 数量是多少？</h3><p>对于 C 类网络，可用的网络 ID 位数为 21。可能的网络 ID 数目为 2，提高到 21或 2,097,152。每个网络 ID 的主机 ID 数量为 2，增加到 8 减去 2，或 254。</p>
+<h3 id="57）使用长于规定长度的电缆时会发生什么？"><a href="#57）使用长于规定长度的电缆时会发生什么？" class="headerlink" title="57）使用长于规定长度的电缆时会发生什么？"></a>57）使用长于规定长度的电缆时会发生什么？</h3><p>电缆太长会导致信号丢失。这意味着数据传输和接收将受到影响，因为信号长度下降。</p>
+<h3 id="58）什么常见的软件问题可能导致网络缺陷？"><a href="#58）什么常见的软件问题可能导致网络缺陷？" class="headerlink" title="58）什么常见的软件问题可能导致网络缺陷？"></a>58）什么常见的软件问题可能导致网络缺陷？</h3><p>软件相关问题可以是以下任何一种或其组合：</p>
+<p>- 客户端服务器问题</p>
+<p>- 应用程序冲突</p>
+<p>- 配置错误</p>
+<p>- 协议不匹配</p>
+<p>- 安全问题</p>
+<p>- 用户政策和权利问题</p>
+<h3 id="59）什么是-ICMP？"><a href="#59）什么是-ICMP？" class="headerlink" title="59）什么是 ICMP？"></a>59）什么是 ICMP？</h3><p>ICMP 是 Internet 控制消息协议。它为 TCP&#x2F;IP 协议栈内的协议提供消息传递和通信。这也是管理由 PING 等网络工具使用的错误信息的协议。</p>
+<h3 id="60）什么是-Ping？"><a href="#60）什么是-Ping？" class="headerlink" title="60）什么是 Ping？"></a>60）什么是 Ping？</h3><p>Ping 是一个实用程序，允许您检查网络上的网络设备之间的连接。您可以使用其IP 地址或设备名称（如计算机名称）ping 设备。</p>
+<h3 id="61）什么是点对点（P2P）？"><a href="#61）什么是点对点（P2P）？" class="headerlink" title="61）什么是点对点（P2P）？"></a>61）什么是点对点（P2P）？</h3><p>对等是不在服务器上回复的网络。该网络上的所有 PC 都是单独的工作站。</p>
+<h3 id="62）什么是-DNS？"><a href="#62）什么是-DNS？" class="headerlink" title="62）什么是 DNS？"></a>62）什么是 DNS？</h3><p>DNS 是域名系统。该网络服务的主要功能是为 TCP&#x2F;IP 地址解析提供主机名。</p>
+<h3 id="63）光纤与其他介质有什么优势？"><a href="#63）光纤与其他介质有什么优势？" class="headerlink" title="63）光纤与其他介质有什么优势？"></a>63）光纤与其他介质有什么优势？</h3><p>光纤的一个主要优点是不太容易受到电气干扰。它还支持更高的带宽，意味着可以发送和接收更多的数据。长距离信号降级也非常小。</p>
+<h3 id="64）集线器和交换机有什么区别？"><a href="#64）集线器和交换机有什么区别？" class="headerlink" title="64）集线器和交换机有什么区别？"></a>64）集线器和交换机有什么区别？</h3><p>集线器充当多端口中继器。然而，随着越来越多的设备连接到它，它将无法有效地管理通过它的流量。交换机提供了一个更好的替代方案，可以提高性能，特别是在所有端口上预期有高流量时。</p>
+<h3 id="65）Windows-RRAS-服务支持的不同网络协议是什么？"><a href="#65）Windows-RRAS-服务支持的不同网络协议是什么？" class="headerlink" title="65）Windows RRAS 服务支持的不同网络协议是什么？"></a>65）Windows RRAS 服务支持的不同网络协议是什么？</h3><p>支持三种主要的网络协议：NetBEUI，TCP&#x2F;IP 和 IPX。</p>
+<h3 id="66）A，B-和-C-类网络中的最大网络和主机是什么？"><a href="#66）A，B-和-C-类网络中的最大网络和主机是什么？" class="headerlink" title="66）A，B 和 C 类网络中的最大网络和主机是什么？"></a>66）A，B 和 C 类网络中的最大网络和主机是什么？</h3><p>对于 A 类，有 126 个可能的网络和 16,777,214 个主机</p>
+<p>对于 B 类，有 16,384 个可能的网络和 65,534 个主机</p>
+<p>对于 C 类，有 2,097,152 个可能的网络和 254 个主机</p>
+<h3 id="67）直通电缆的标准颜色顺序是什么？"><a href="#67）直通电缆的标准颜色顺序是什么？" class="headerlink" title="67）直通电缆的标准颜色顺序是什么？"></a>67）直通电缆的标准颜色顺序是什么？</h3><p>橙色&#x2F;白色，橙色，绿色&#x2F;白色，蓝色，蓝色&#x2F;白色，绿色，棕色&#x2F;白色，棕色。</p>
+<h3 id="68）什么协议落在-TCP-x2F-IP-协议栈的应用层之下？"><a href="#68）什么协议落在-TCP-x2F-IP-协议栈的应用层之下？" class="headerlink" title="68）什么协议落在 TCP&#x2F;IP 协议栈的应用层之下？"></a>68）什么协议落在 TCP&#x2F;IP 协议栈的应用层之下？</h3><p>以下是 TCP&#x2F;IP 应用层协议：FTP，TFTP，Telnet 和 SMTP。</p>
+<h3 id="69）您需要连接两台电脑进行文件共享。是否可以这样做，而不使用集线器或路由器？"><a href="#69）您需要连接两台电脑进行文件共享。是否可以这样做，而不使用集线器或路由器？" class="headerlink" title="69）您需要连接两台电脑进行文件共享。是否可以这样做，而不使用集线器或路由器？"></a>69）您需要连接两台电脑进行文件共享。是否可以这样做，而不使用集线器或路由器？</h3><p>是的，您可以使用一根电缆将两台计算机连接在一起。在这种情况下可以使用交叉型电缆。在这种设置中，一条电缆的数据传输引脚连接到另一条电缆的数据接收引脚，反之亦然。</p>
+<h3 id="70）什么是-ipconfig？"><a href="#70）什么是-ipconfig？" class="headerlink" title="70）什么是 ipconfig？"></a>70）什么是 ipconfig？</h3><p>Ipconfig 是一个常用于识别网络上计算机的地址信息的实用程序。它可以显示物理地址以及 IP 地址。</p>
+<h3 id="71）直通和交叉电缆有什么区别？"><a href="#71）直通和交叉电缆有什么区别？" class="headerlink" title="71）直通和交叉电缆有什么区别？"></a>71）直通和交叉电缆有什么区别？</h3><p>直通电缆用于将计算机连接到交换机，集线器或路由器。交叉电缆用于将两个类似设备连接在一起，如 PC 到 PC 或集线器到集线器。</p>
+<h3 id="72）什么是客户端-x2F-服务器？"><a href="#72）什么是客户端-x2F-服务器？" class="headerlink" title="72）什么是客户端&#x2F;服务器？"></a>72）什么是客户端&#x2F;服务器？</h3><p>客户端&#x2F;服务器是一种类型的网络，其中一个或多个计算机充当服务器。服务器提供集中的资源库，如打印机和文件。客户端是指访问服务器的工作站。</p>
+<h3 id="73）描述网络。"><a href="#73）描述网络。" class="headerlink" title="73）描述网络。"></a>73）描述网络。</h3><p>网络是指用于数据通信的计算机和外围设备之间的互连。可以使用有线电缆或通过无线链路进行网络连接。</p>
+<h3 id="74）将-NIC-卡从一台-PC-移动到另一台-PC-时，MAC-地址是否也被转移？"><a href="#74）将-NIC-卡从一台-PC-移动到另一台-PC-时，MAC-地址是否也被转移？" class="headerlink" title="74）将 NIC 卡从一台 PC 移动到另一台 PC 时，MAC 地址是否也被转移？"></a>74）将 NIC 卡从一台 PC 移动到另一台 PC 时，MAC 地址是否也被转移？</h3><p>是的，那是因为 MAC 地址是硬连线到 NIC 电路，而不是 PC。这也意味着当 NIC卡被另一个替换时，PC 可以具有不同的 MAC 地址。</p>
+<h3 id="75）解释聚类支持"><a href="#75）解释聚类支持" class="headerlink" title="75）解释聚类支持"></a>75）解释聚类支持</h3><p>群集支持是指网络操作系统在容错组中连接多台服务器的能力。这样做的主要目的是在一台服务器发生故障的情况下，集群中的下一个服务器将继续进行所有处理。</p>
+<h3 id="76）在包含两个服务器和二十个工作站的网络中，安装防病毒程序的最佳位置是哪里？"><a href="#76）在包含两个服务器和二十个工作站的网络中，安装防病毒程序的最佳位置是哪里？" class="headerlink" title="76）在包含两个服务器和二十个工作站的网络中，安装防病毒程序的最佳位置是哪里？"></a>76）在包含两个服务器和二十个工作站的网络中，安装防病毒程序的最佳位置是哪里？</h3><p>必须在所有服务器和工作站上安装防病毒程序，以确保保护。这是因为个人用户可以访问任何工作站，并在插入可移动硬盘驱动器或闪存驱动器时引入计算机病毒。</p>
+<h3 id="77）描述以太网。"><a href="#77）描述以太网。" class="headerlink" title="77）描述以太网。"></a>77）描述以太网。</h3><p>以太网是当今使用的流行网络技术之一。它是在 20 世纪 70 年代初开发的，并且基于 IEEE 中规定的规范。以太网在局域网中使用。</p>
+<h3 id="78）实现环形拓扑有什么缺点？"><a href="#78）实现环形拓扑有什么缺点？" class="headerlink" title="78）实现环形拓扑有什么缺点？"></a>78）实现环形拓扑有什么缺点？</h3><p>如果网络上的一个工作站发生故障，可能会导致整个网络丢失。另一个缺点是，当需要在网络的特定部分进行调整和重新配置时，整个网络也必须被暂时关闭。</p>
+<h3 id="79）CSMA-x2F-CD-和-CSMA-x2F-CA-有什么区别？"><a href="#79）CSMA-x2F-CD-和-CSMA-x2F-CA-有什么区别？" class="headerlink" title="79）CSMA&#x2F;CD 和 CSMA&#x2F;CA 有什么区别？"></a>79）CSMA&#x2F;CD 和 CSMA&#x2F;CA 有什么区别？</h3><p>CSMA&#x2F;CD 或碰撞检测，每当碰撞发生时重新发送数据帧。CSMA&#x2F;CA 或碰撞避免，将首先在数据传输之前广播意图发送。</p>
+<h3 id="80）什么是-SMTP？"><a href="#80）什么是-SMTP？" class="headerlink" title="80）什么是 SMTP？"></a>80）什么是 SMTP？</h3><h3 id="SMTP-是简单邮件传输协议的缩写。该协议处理所有内部邮件，并在-TCP-x2F-IP-协议栈上提供必要的邮件传递服务。"><a href="#SMTP-是简单邮件传输协议的缩写。该协议处理所有内部邮件，并在-TCP-x2F-IP-协议栈上提供必要的邮件传递服务。" class="headerlink" title="SMTP 是简单邮件传输协议的缩写。该协议处理所有内部邮件，并在 TCP&#x2F;IP 协议栈上提供必要的邮件传递服务。"></a>SMTP 是简单邮件传输协议的缩写。该协议处理所有内部邮件，并在 TCP&#x2F;IP 协议栈上提供必要的邮件传递服务。</h3><h3 id="81）什么是组播路由？"><a href="#81）什么是组播路由？" class="headerlink" title="81）什么是组播路由？"></a>81）什么是组播路由？</h3><p>组播路由是一种有针对性的广播形式，将消息发送到所选择的用户组，而不是将其发送到子网上的所有用户。</p>
+<h3 id="82）加密在网络上的重要性是什么？"><a href="#82）加密在网络上的重要性是什么？" class="headerlink" title="82）加密在网络上的重要性是什么？"></a>82）加密在网络上的重要性是什么？</h3><p>加密是将信息转换成用户不可读的代码的过程。然后使用秘密密钥或密码将其翻译或解密回其正常可读格式。加密有助于确保中途截获的信息仍然不可读，因为用户必须具有正确的密码或密钥。</p>
+<h3 id="83）如何安排和显示-IP-地址？"><a href="#83）如何安排和显示-IP-地址？" class="headerlink" title="83）如何安排和显示 IP 地址？"></a>83）如何安排和显示 IP 地址？</h3><p>IP 地址显示为一系列由周期或点分隔的四位十进制数字。这种安排的另一个术语是点分十进制格式。一个例子是 192.168.101.2</p>
+<h3 id="84）解释认证的重要性。"><a href="#84）解释认证的重要性。" class="headerlink" title="84）解释认证的重要性。"></a>84）解释认证的重要性。</h3><p>认证是在用户登录网络之前验证用户凭据的过程。它通常使用用户名和密码进行。这提供了限制来自网络上的有害入侵者的访问的安全手段。</p>
+<h3 id="85）隧道模式是什么意思？"><a href="#85）隧道模式是什么意思？" class="headerlink" title="85）隧道模式是什么意思？"></a>85）隧道模式是什么意思？</h3><p>这是一种数据交换模式，其中两个通信计算机本身不使用 IPSec。相反，将 LAN连接到中转网络的网关创建了一个使用 IPSec 协议来保护通过它的所有通信的虚拟隧道。</p>
+<h3 id="86）建立-WAN-链路涉及的不同技术有哪些？"><a href="#86）建立-WAN-链路涉及的不同技术有哪些？" class="headerlink" title="86）建立 WAN 链路涉及的不同技术有哪些？"></a>86）建立 WAN 链路涉及的不同技术有哪些？</h3><p>模拟连接 - 使用常规电话线；数字连接 - 使用数字电话线；交换连接 - 使用发送方和接收方之间的多组链接来移动数据。</p>
+<h3 id="87）网格拓扑的一个优点是什么？"><a href="#87）网格拓扑的一个优点是什么？" class="headerlink" title="87）网格拓扑的一个优点是什么？"></a>87）网格拓扑的一个优点是什么？</h3><p>在一个链接失败的情况下，总会有另一个链接可用。网状拓扑实际上是最容错的网络拓扑之一。</p>
+<h3 id="88）在排除计算机网络问题时，可能会发生什么常见的硬件相关问题？"><a href="#88）在排除计算机网络问题时，可能会发生什么常见的硬件相关问题？" class="headerlink" title="88）在排除计算机网络问题时，可能会发生什么常见的硬件相关问题？"></a>88）在排除计算机网络问题时，可能会发生什么常见的硬件相关问题？</h3><p>大部分网络由硬件组成。这些领域的问题可能包括硬盘故障，NIC 损坏甚至硬件启动。不正确的硬件配置也是其中一个疑难问题。</p>
+<h3 id="89）可以做什么来修复信号衰减问题？"><a href="#89）可以做什么来修复信号衰减问题？" class="headerlink" title="89）可以做什么来修复信号衰减问题？"></a>89）可以做什么来修复信号衰减问题？</h3><p>处理这种问题的常见方法是使用中继器和集线器，因为它将有助于重新生成信号，从而防止信号丢失。检查电缆是否正确终止也是必须的。</p>
+<h3 id="90）动态主机配置协议如何协助网络管理？"><a href="#90）动态主机配置协议如何协助网络管理？" class="headerlink" title="90）动态主机配置协议如何协助网络管理？"></a>90）动态主机配置协议如何协助网络管理？</h3><p>网络管理员不必访问每台客户端计算机来配置静态 IP 地址，而是可以应用动态主机配置协议来创建称为可以动态分配给客户端的范围的 IP 地址池。</p>
+<h3 id="91）解释网络概念的概况？"><a href="#91）解释网络概念的概况？" class="headerlink" title="91）解释网络概念的概况？"></a>91）解释网络概念的概况？</h3><p>配置文件是为每个用户设置的配置设置。例如，可以创建将用户置于组中的配置文件。</p>
+<h3 id="92）什么是-Sneakernet？"><a href="#92）什么是-Sneakernet？" class="headerlink" title="92）什么是 Sneakernet？"></a>92）什么是 Sneakernet？</h3><p>Sneakernet 被认为是最早的联网形式，其中使用可移动介质（如磁盘，磁带）物理传输数据。</p>
+<h3 id="93）IEEE-在计算机网络中的作用是什么？"><a href="#93）IEEE-在计算机网络中的作用是什么？" class="headerlink" title="93）IEEE 在计算机网络中的作用是什么？"></a>93）IEEE 在计算机网络中的作用是什么？</h3><p>IEEE 或电气和电子工程师学会是由电气和电子设备标准发布和管理的工程师组成的组织。这包括网络设备，网络接口，cablings 和连接器。</p>
+<h3 id="94）TCP-x2F-IP-Internet-层下有哪些协议？"><a href="#94）TCP-x2F-IP-Internet-层下有哪些协议？" class="headerlink" title="94）TCP&#x2F;IP Internet 层下有哪些协议？"></a>94）TCP&#x2F;IP Internet 层下有哪些协议？</h3><p>该层管理的协议有 4 种。这些是 ICMP，IGMP，IP 和 ARP。</p>
+<h3 id="95）谈到网络，什么是权限？"><a href="#95）谈到网络，什么是权限？" class="headerlink" title="95）谈到网络，什么是权限？"></a>95）谈到网络，什么是权限？</h3><p>权限是指在网络上执行特定操作的授权许可。网络上的每个用户可以分配个人权限，具体取决于该用户必须允许的内容。</p>
+<h3 id="96）建立-VLAN-的一个基本要求是什么？"><a href="#96）建立-VLAN-的一个基本要求是什么？" class="headerlink" title="96）建立 VLAN 的一个基本要求是什么？"></a>96）建立 VLAN 的一个基本要求是什么？</h3><p>需要一个 VLAN，因为在交换机级别只有一个广播域，这意味着每当新用户连接时，该信息都会传播到整个网络。交换机上的 VLAN 有助于在交换机级别创建单独的广播域。它用于安全目的。</p>
+<h3 id="97）什么是-IPv6？"><a href="#97）什么是-IPv6？" class="headerlink" title="97）什么是 IPv6？"></a>97）什么是 IPv6？</h3><p>IPv6 或 Internet 协议版本 6 被开发以替代 IPv4。目前，IPv4 正在用于控制互联网流量，但 IPv4 已经饱和。IPv6 能够克服这个限制。</p>
+<h3 id="98）什么是-RSA-算法？"><a href="#98）什么是-RSA-算法？" class="headerlink" title="98）什么是 RSA 算法？"></a>98）什么是 RSA 算法？</h3><p>RSA 是 Rivest-Shamir-Adleman 算法的缩写。它是目前最常用的公钥加密算法。</p>
+<h3 id="99）什么是网格拓扑？"><a href="#99）什么是网格拓扑？" class="headerlink" title="99）什么是网格拓扑？"></a>99）什么是网格拓扑？</h3><p>网格拓扑是一种设置，其中每个设备都直接连接到网络上的每个其他设备。因此，它要求每个设备具有至少两个网络连接。</p>
+<h3 id="100）100Base-FX-网络的最大段长度是多少？"><a href="#100）100Base-FX-网络的最大段长度是多少？" class="headerlink" title="100）100Base-FX 网络的最大段长度是多少？"></a>100）100Base-FX 网络的最大段长度是多少？</h3><p>使用 100Base-FX 的网段的最大允许长度为 412 米。整个网络的最大长度为 5 公里。</p>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/blog/tags/%E8%BD%AC%E8%BD%BD/" class="">
+              转载
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>author:  </strong>Boss</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>link:  </strong>
+    <a href="/blog/2020/03/06/100-ge-wang-luo-ji-chu-zhi-shi-pu-ji-kan-wan-cheng-ban-ge-wang-luo-gao-shou/" target="_blank" title="100 个网络基础知识普及，看完成半个网络高手！">http://example.com/2020/03/06/100-ge-wang-luo-ji-chu-zhi-shi-pu-ji-kan-wan-cheng-ban-ge-wang-luo-gao-shou/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>Copyright notice:   </strong>
+      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      reprint policy. If reproduced, please indicate source!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/blog/medias/9.jpg" class="lazyload placeholder" data-srcset="/blog/medias/9.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+    </div>
+    <a href="/blog/2020/03/06/sql-yu-ju-da-quan-suo-you-de-sql-du-zai-zhe-li/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> Prev:
+        <div class="title-text">SQL语句大全，所有的SQL都在这里</div>
+      </div>
+      
+      <!-- <div class="content">
+        ​                   一、基础
+1、说明：创建数据库CREATE DATABASE database-
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/blog/medias/5.jpg" class="lazyload placeholder" data-srcset="/blog/medias/5.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+    </div>
+    <a href="/blog/2020/02/29/you-qu-hao-wan-you-zhuang-b-de-linux-ming-ling/" class="post-nav-link">
+      <div class="title">
+        Next: <i class="fas fa-angle-right"></i>
+        <div class="title-text">有趣、好玩、又装B的 Linux 命令！</div>
+      </div>
+      <!-- <div class="content">
+         1. sl 命令 
+你会看到一辆火车从屏幕右边开往左边……
+安装
+$ sudo apt-get install sl
+
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="/blog/medias/zfb.jpg" class="lazyload placeholder" data-srcset="/blog/medias/zfb.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="/blog/medias/wx.jpg" class="lazyload placeholder" data-srcset="/blog/medias/wx.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/blog/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      
+<section id="comments" style="padding: 1em; margin: 15px auto;"
+	class="animated bounceInUp">
+	<div id="vcomment" class="comment"></div>
+</section>
+<style>
+	#comments {
+		background: rgba(255,255,255,0.9);
+	}
+	#veditor {
+		background-image: url('https://img.zcool.cn/community/01a253594c71cfa8012193a329a77f.gif');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: rgba(255, 255, 255, 0);
+		resize: vertical;
+	}
+	#veditor:focus{
+		background-position-y: 200px;
+		transition: all 0.2s ease-in-out 0s;
+	}
+	#vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
+		background-color: #42b983;
+	}
+	.v[data-class=v] .vbtn:active, .v[data-class=v] .vbtn:hover {
+		color: #42b983;
+		border-color: #42b983;
+	}
+	#vcomment .vcards .vcard .vhead .vsys i {
+		display: none;
+	}
+	/* 底部valine链接 */
+	#vcomment .vpower {
+		display: none;
+	}
+	
+	/* 底下注释是修改 名称和邮箱和网址输入框的样式 */
+	/* #vcomment .vheader {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	#vcomment .vheader .vnick {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vmail {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vlink {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	} */
+
+	img.vimg {
+		transition: all 1s;
+		/* 头像旋转时间为 1s */
+	}
+
+	img.vimg:hover {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+	}
+
+	#vcomment .vcards .vcard {
+		padding: 15px 20px 0 20px;
+		border-radius: 10px;
+		margin-bottom: 15px;
+		box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+		transition: all .3s
+	}
+
+	#vcomment .vcards .vcard:hover {
+		box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+	}
+
+	#vcomment .vcards .vcard .vh .vcard {
+		border: none;
+		box-shadow: none;
+	}
+</style>
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fas fa-list-ul" aria-hidden="true"></i><span>catalog</span>
+        
+          <div class="toc-open-close">catalog</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端目录按钮 -->
+  <div id="toc-mobile-btn">
+    <i class="fas fa-list-ul" aria-hidden="true"></i>
+  </div>
+
+
+<script>
+  function closeToc(init) {
+    $(".toc-aside").css({'width': 0, 'padding': 0, 'transition': init ?  'noe' : 'width 0.3s' });
+    $(".toc-content").css({'width': 0});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+    $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+  };
+  function openToc() {
+    $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+    $(".toc-aside").css({'width': '300px', 'padding': '0 10px', 'transition': 'width 0.3s'});
+    $(".toc-content").css({'width': '300px'});
+    $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+  }
+  function openBtnClickFn () {
+    let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+    let open = eval('' || 'true');
+    openOrCloseBtn.click(function() {
+      if (open) {
+        closeToc();
+        open = false;
+      } else {
+        openToc();
+        open = true;
+      }
+    });
+  };
+  openBtnClickFn();
+  initCloseTocWidth(true);
+
+  function initCloseTocWidth(init) {
+    if (window.innerWidth >= 992) {
+      let isClose = false;
+      isClose && closeToc(init)
+    }
+  }
+
+  document.addEventListener('pjax:complete', function () {
+    $(".toc-aside").css({'transition': 'no'});
+  })
+  document.addEventListener('pjax:complete', function () {
+    openBtnClickFn();
+  })
+  
+</script>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/blog/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/blog/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
+
+      </main>
+    </div>
+
+    <!-- 页脚 -->
+    
+  
+  <div class="footer bg-color">
+    <div class="footer-main">
+      
+        
+          <div class="link">
+            
+              
+                <a target="_blank" rel="noopener" href="http://baidu.com" class="social">
+                  
+                    <img src="https://seikim.com/i/2021/06/15/h4fynr.svg" class="lazyload placeholder" data-srcset="https://seikim.com/i/2021/06/15/h4fynr.svg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"/>
+                  
+                </a>
+              
+            
+              
+                <a target="_blank" rel="noopener" href="http://baidu.com" class="social">
+                  
+                    <img src="https://seikim.com/i/2021/06/15/h4fynr.svg" class="lazyload placeholder" data-srcset="https://seikim.com/i/2021/06/15/h4fynr.svg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" style="border-radius:120px"/>
+                  
+                </a>
+              
+            
+          </div>
+        
+      
+        
+          <div class="footer-copyright">
+            <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/yuang01">yuang01</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+
+          </div>
+        
+      
+        
+          
+            <!-- 不蒜子统计 -->
+            <!-- 不蒜子统计 -->
+<span id="busuanzi_container_site_pv">
+      <i class="fas fa-eye" aria-hidden="true"></i>Total visits：<span id="busuanzi_value_site_pv"></span> times
+</span>
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+      <i class="fas fa-users" aria-hidden="true"></i>Number of visitors：<span id="busuanzi_value_site_uv"></span> people
+</span>
+
+          
+        
+      
+        
+          <div class="footer-custom">
+            
+          </div>
+        
+      
+    </div>
+  </div>
+
+
+
+    <!-- 渲染暗黑按钮 -->
+    
+      <div class="dark">
+  <div class="dark-content">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+    
+    <!-- 渲染回到顶部按钮 -->
+    
+      <div class="goTop top-btn-color" pointer>
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/blog/js/goTop.js"></script>
+
+    
+    <!-- 渲染左下角音乐播放器 -->
+    
+      <link rel="stylesheet" href="/blog/js/aplayer/APlayer@1.10.1.min.css">
+<style>
+.aplayer .aplayer-lrc p {
+  
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px !important;
+}
+
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  
+  font-size: 15px;
+  color: #42b983;
+}
+
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0px !important;
+}
+
+
+</style>
+<meting-js  
+  class=""
+  server="tencent"
+  type="playlist"
+  id="8062553743"
+  fixed='true'
+  autoplay='true'
+  theme='#42b983'
+  loop='none'
+  order='list'
+  preload='auto'
+  volume='0.4'
+  list-folded='false'
+>
+</meting-js>
+
+<!-- <style>
+  #aplayer {
+    position: fixed;
+    left: 0;
+    bottom: 300px;
+  }
+</style> -->
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/blog/js/fancybox/jquery.fancybox.min.js"></script>
+    
+
+    <!-- 百度解析 -->
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <!-- 背景彩带 -->
+    
+      <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/blog/js/ribbon.min.js"></script>
+    
+
+    <script src="/blog/js/utils/index.js"></script>
+    <script src="/blog/js/app.js"></script>
+    
+    <!-- 文章目录所需js -->
+<link href="/blog/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/blog/js/tocbot/tocbot.min.js"></script>
+
+<script>
+  var headerEl = 'h2, h3, h4',  //headers 
+    content = '.post-detail',//文章容器
+    idArr = {};  //标题数组以确定是否增加索引id
+  //add #id
+  var option = {
+    // Where to render the table of contents.
+    tocSelector: '.toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: content,
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: headerEl,
+    scrollSmooth: true,
+    scrollSmoothOffset: -80,
+    headingsOffset: -($(window).height() * 0.4 - 45),
+    positionFixedSelector: '.toc-main',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    activeLinkClass: 'is-active-link',
+    // onClick: function (e) {},
+  }
+  if ($('.toc').length > 0) {
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      tocbot.init(option);
+      mobileTocClick();
+    });
+
+  }
+
+  window.tocScrollFn = function () {
+    return bamboo.throttle(function () {
+      findHeadPosition();
+    }, 100)()
+  }
+  window.addEventListener('scroll', tocScrollFn);
+
+  const findHeadPosition = function (top) {
+    if ($('.toc-list').length <= 0) {
+      return false;
+    }
+    setTimeout(() => {  // or DOMContentLoaded 
+      autoScrollToc();
+    }, 0);
+  }
+
+  const autoScrollToc = function () {
+    const $activeItem = document.querySelector('.is-active-link');
+    const $cardToc = document.querySelector('.toc-content');
+    const activePosition = $activeItem.getBoundingClientRect().top
+    const sidebarScrollTop = $cardToc.scrollTop
+    if (activePosition > (document.documentElement.clientHeight - 100)) {
+      $cardToc.scrollTop = sidebarScrollTop + 150
+    }
+    if (activePosition < 100) {
+      $cardToc.scrollTop = sidebarScrollTop - 150
+    }
+  }
+
+  document.addEventListener('pjax:send', function () {
+    if ($('.toc').length) {
+      tocbot.destroy();
+    }
+  });
+
+  document.addEventListener('pjax:complete', function () {
+    if ($('.toc').length) {
+      tocbot.init(option);
+      mobileTocClick();
+    }
+  });
+  
+  // 手机端toc按钮点击出现目录
+  const mobileTocClick = function () {
+    const $cardTocLayout = document.getElementsByClassName('toc-aside')[0];
+    const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0];
+    let right = '45px';
+    if (window.innerWidth >= 551 && window.innerWidth <= 992) {
+      right = '100px'
+    }
+    const mobileToc = {
+      open: () => {
+        $cardTocLayout.style.cssText = 'animation: toc-open .3s; opacity: 1; right: ' + right
+      },
+
+      close: () => {
+        $cardTocLayout.style.animation = 'toc-close .2s'
+        setTimeout(() => {
+          $cardTocLayout.style.cssText = "opacity:''; animation: ''; right: ''"
+        }, 100)
+      }
+    }
+    document.getElementById('toc-mobile-btn').addEventListener('click', () => {
+      if (window.getComputedStyle($cardTocLayout).getPropertyValue('opacity') === '0') mobileToc.open()
+      else mobileToc.close()
+    })
+
+    $cardToc.addEventListener('click', (e) => {
+      if (window.innerWidth < 992) { // 小于992px的时候
+        mobileToc.close()
+      }
+    })
+  }
+</script>
+
+<style>
+  .is-position-fixed {
+    position: sticky !important;
+    top: 74px;
+  }
+
+  .toc-main ul {
+    counter-reset: show-list;
+  }
+
+  .toc-main ul li::before {
+    content: counter(item)".";
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 0;
+  }
+</style> 
+
+<!-- 设置导航背景 -->
+<script>
+  let setHeaderClass = () => {
+    const headerMenuTransparent = true;
+    if (!headerMenuTransparent) { return; }
+    const nav = $('#navHeader');
+    const navTop = nav.outerHeight();
+    const winTop = $(window).scrollTop();
+    if(winTop > navTop) {
+      nav.addClass('header-bg-color');
+    }
+    else {
+      nav.removeClass('header-bg-color');
+    }
+  };
+
+  let scrollCollect = () => {
+    return bamboo.throttle(function (e) {
+      setHeaderClass();
+    }, 200)()
+  }
+
+  let initHeaderBg = () => {
+    setHeaderClass();
+  }
+
+  setHeaderClass();
+  window.addEventListener('scroll', scrollCollect);
+
+  document.addEventListener('pjax:send', function () {
+    window.removeEventListener('scroll', scrollCollect)
+  })
+  document.addEventListener('pjax:complete', function () {
+    window.addEventListener('scroll', scrollCollect);
+    setHeaderClass();
+  })
+</script> 
+
+<!-- 渲染issues标签里的内容 -->
+<script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) {
+      return;
+    } 
+    loadScript('/blog/js/issues/index.js');
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof IssuesAPI == "undefined") {
+      loadIssuesJS();
+    }
+  })
+</script>
+
+<!-- 输入框打字特效 -->
+<!-- 输入框打字特效 -->
+
+  <script src="/blog/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+<!-- markdown代码一键复制功能 -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/blog/js/clipboard/clipboard.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script data-pjax>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        var copy = 'copy';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fas fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          doSomething();
+        })
+        $(document).unbind('keypress').bind('keypress', function (e) {
+          if (e.ctrlKey && e.keyCode == 67) {
+            doSomething();
+          }
+        })
+
+        function doSomething() {
+          that.$notify({
+            title: "成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+  
+
+<!-- 图片懒加载 -->
+<script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+<!-- 卡片滚动动画 -->
+
+    <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.reveal', {
+      distance: '120px',
+      duration: '400',
+      interval: '30',
+      scale: '1',
+      origin: 'bottom', // 动画开始的方向
+      easing: 'ease'
+    });
+  }
+  $(function () {
+    var checkScrollReveal = setInterval(function () {
+      if ($("#safearea").css("display") != "block") return
+      if (typeof ScrollReveal == "undefined") return
+      clearInterval(checkScrollReveal)
+      pjax_scrollrebeal();
+    }, 100)
+  });
+  document.addEventListener('pjax:complete', function () {
+    pjax_scrollrebeal();
+  })
+</script>
+   
+
+<!-- 评论所需js -->
+
+  
+    <!-- 弹幕所需的css和js -->
+    
+  <!-- 弹幕插件 -->
+  <link href="/blog/js/danmu/barrager.css" rel="stylesheet">
+  <script src="/blog/js/danmu/jquery.barrager.js"></script>
+
+<!-- 具体js，请前往valine/script.ejs查看 -->
+
+    <script>
+  var requiredFields = 'nick';
+  requiredFields = requiredFields.split(',');
+  comment_el = '.comment';
+  let looperValine = null;
+  load_valine = function () {
+    if ($(comment_el).length) {
+      var valine = new Valine({
+        el: '#vcomment',
+        path: window.location.pathname,
+        notify: false,
+        verify: false,
+        app_id: "oG5OWzf0iJlMbDC7nVxtI3Al-gzGzoHsz",
+        app_key: "wEMz5fleopxe0QQezOHR36Xd",
+        placeholder: "客官，说点什么吧",
+        avatar: "",
+        master: "8d6fa8c3f6fba9a3282f42007459faf4",   //博主邮箱md5
+        tagMeta: ["博主","小伙伴","访客"],     //标识字段名
+        friends: "8d6fa8c3f6fba9a3282f42007459faf4",
+        metaPlaceholder: { "nick": "昵称/QQ号", "mail": "邮箱" },
+        requiredFields: requiredFields,
+        enableQQ: true,
+      });
+      function debounce(fn) {
+        var timerID = null
+        return function () {
+          var arg = arguments[0]   //获取事件
+          if (timerID) {
+            clearTimeout(timerID)
+          }
+          timerID = setTimeout(function () {
+            fn(arg)              //事件传入函数
+          }, 200)
+        }
+      }
+      //查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
+      var themeDanmu = eval('true');
+      var themeLoop = eval('false');
+      var themeLooperTime = '5000' || 5000;
+      var speed = '40' || 20;
+      var isBarrager = true;
+      if (themeDanmu == true) {
+        do_barrager();
+        if ($('.danmuBox').length <= 0) {
+          $('.navbar').append('<div class="danmuBox"><div class="danmuBtn open"><span class="danmuCircle"></span><span class="danmuText">弹幕</span></div></div>');
+        }
+        $('.danmuBtn').on('click', debounce(
+          function () {
+            if ($('.danmuBtn').hasClass('open')) {
+              $('.danmuBtn').removeClass('open')
+              clearInterval(looperValine);
+              $.fn.barrager.removeAll();
+            } else {
+              $('.danmuBtn').addClass("open");
+              do_barrager();
+            }
+          }
+        ))
+      }
+      function do_barrager() {
+        isBarrager && valine.Q(window.location.pathname).find().then(function (comments) {
+          // var num = 0; // 可以记录条数，循环调用的时候只取最新的评论放入弹幕中
+          var run_once = true;
+          var looper_time = themeLooperTime;
+          var total = comments.length;
+          // var looper = null;
+          var index = 0;
+          if (total > 0) {
+            barrager();
+          } else {
+            // 当评论数为0的时候，自动关闭弹幕
+            // $('.danmuBtn').removeClass('open');
+          }
+          function barrager() {
+            if (run_once) {
+              //如果是首次执行,则设置一个定时器,并且把首次执行置为false
+              looperValine = setInterval(barrager, looper_time);
+              run_once = false;
+            }
+            var content = comments[index]._serverData.comment;
+            var email = comments[index]._serverData.mail;
+            var link = comments[index]._serverData.link;
+            var newcontent = content.substring(0, 50).replace(/<[^>]+>/g, "");
+            //发布一个弹幕
+            const item = {
+              img: `https://q1.qlogo.cn/g?b=qq&nk=${email}&s=640`, //图片 
+              info: newcontent, //文字 
+              href: link, //链接 
+              close: true, //显示关闭按钮 
+              speed: speed, //延迟,单位秒,默认6 
+              color: '#fff', //颜色,默认白色 
+              old_ie_color: '#000000', //ie低版兼容色,不能与网页背景相同,默认黑色
+            }
+            $('body').barrager(item);
+            //索引自增
+            index++;
+            //所有弹幕发布完毕，清除计时器。
+            if (index == total) {
+              clearInterval(looperValine);
+              if (themeLoop === true) {
+                setTimeout(function () {
+                  do_barrager();
+                }, 5000);
+              } else {
+                $('.danmuBtn').removeClass('open');
+              }
+              return false;
+            }
+
+          }
+        })
+      }
+    }
+  };
+  $(document).ready(load_valine);
+  document.addEventListener('pjax:send', function (e) {
+    
+      $('.danmuBox').length > 0 && $('.danmuBox').remove()
+      looperValine && clearInterval(looperValine);
+      $.fn.barrager.removeAll();
+    
+  })
+  document.addEventListener('pjax:complete', function () {
+    load_valine();
+  });
+</script>
+
+  
+
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+  
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas>
+    <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script src="/blog/js/cursor/explosion.min.js"></script>
+  
+
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+
+
+    <!-- pjax -->
+    
+
+<!-- pjax -->
+
+
+  <script src="/blog/js/pjax@0.2.8/index.js"></script>
+  
+    <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script>
+      window.ShowLoading = function() {
+        $(".loading-circle").css("display", "block");
+      };
+      window.HideLoading = function() {
+        $(".loading-circle").css("display", "none");
+      }
+    </script>
+  
+	<script>
+    document.addEventListener('pjax:complete', function () {
+      window.HideLoading();
+    })
+    document.addEventListener('pjax:send', function () {
+      window.ShowLoading();
+    })
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+    })
+	</script>
+</div>
+
+  
+
+  <script>
+    var pjax = new Pjax({
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([no-pjax])',   // 拦截正常带链接的 a 标签
+      selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
+      cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+      timeout: 5000
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+    
+    // 刷新不从顶部开始
+    document.addEventListener("DOMContentLoaded", function () {
+      history.scrollRestoration = 'auto';
+    })
+  </script>
+
+
+
+  </body>
+</html>
