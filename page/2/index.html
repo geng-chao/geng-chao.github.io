@@ -687,7 +687,7 @@
               
               <div class="swiper-video">
                 <video class="full-video" poster="https://img14.360buyimg.com/ddimg/jfs/t1/175057/18/19582/882056/60ee7ac8Ef0045710/202d2ad878684a3b.gif" autoplay loop muted style="width: 100%;height:100%;object-fit: cover;">
-                  <source style="width: 100%;height: 100vh;" src="/videos/pexels-karolina-grabowska-8370806.avi">
+                  <source style="width: 100%;height: 100vh;" src="/videos/pexels-bela-rice-5239162.mp4">
                 </video>
                 <div class="swiper-video-maskBox"></div>
               </div>
@@ -700,12 +700,16 @@
                 <div class="flag-text-content">
                   <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">青墨书晚风</div>
                   
-                      <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"></div>
+                    <div class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" :type-speed="100" :back-speed="50">
+                        <h1 class="typing"></h1>
+                      </vue-typed-js>
+                    </div>
                     
                 </div>
                 <div style="display: flex;" class="flag-text-btns">
                   
-                    <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">按钮1</a></div>
+                    <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://yuang01.gitee.io/2021/02/08/hexo-theme-bamboo-new/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">国内网址</a></div>
                   
                   
                     <div class="ani animated" style="margin-left: 10px;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a target="_blank" rel="noopener" href="https://gitee.com/yuang01/hexo-theme-bamboo/repository/archive/dev.zip" class="read-more swiper-btn-color2" style="display: inline-block; z-index:1;border: 1px solid white;">按钮2</a></div>
@@ -733,7 +737,7 @@
   var loop = JSON.parse('true') ? false : JSON.parse('true');
   var effect = 'slide';
   var swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
-  var defaultDesc = '';
+  var defaultDesc = '山重水复疑无路';
   defaultDesc = defaultDesc.split(',');
   var defaultDescTypedLoop = JSON.parse('true');
   var vm = new Vue({
@@ -2011,8 +2015,8 @@ Step 2 ：修改配置文件CentOS 6.8vim &#x2F;etc&
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sat Mar 26 2022 23:11:40 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2022-03-26 日</div>
+            <div id="last-update" style="display: none;">Sun Mar 27 2022 13:10:40 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2022-03-27 日</div>
           
         </div>
         
@@ -2062,7 +2066,7 @@ Step 2 ：修改配置文件CentOS 6.8vim &#x2F;etc&
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2022-03-26 日';
+            document.getElementById('last-update-show').innerHTML = '2022-03-27 日';
           }
         </script>
         
@@ -2647,7 +2651,7 @@ Step 2 ：修改配置文件CentOS 6.8vim &#x2F;etc&
 <!-- 具体js，请前往valine/script.ejs查看 -->
 
     <script>
-  var requiredFields = 'nick';
+  var requiredFields = 'nick,mail';
   requiredFields = requiredFields.split(',');
   comment_el = '.comment';
   let looperValine = null;
@@ -2683,7 +2687,7 @@ Step 2 ：修改配置文件CentOS 6.8vim &#x2F;etc&
       }
       //查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
       var themeDanmu = eval('true');
-      var themeLoop = eval('false');
+      var themeLoop = eval('true');
       var themeLooperTime = '5000' || 5000;
       var speed = '40' || 20;
       var isBarrager = true;

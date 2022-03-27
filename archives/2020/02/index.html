@@ -1390,7 +1390,7 @@
 <!-- 具体js，请前往valine/script.ejs查看 -->
 
     <script>
-  var requiredFields = 'nick';
+  var requiredFields = 'nick,mail';
   requiredFields = requiredFields.split(',');
   comment_el = '.comment';
   let looperValine = null;
@@ -1426,7 +1426,7 @@
       }
       //查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
       var themeDanmu = eval('true');
-      var themeLoop = eval('false');
+      var themeLoop = eval('true');
       var themeLooperTime = '5000' || 5000;
       var speed = '40' || 20;
       var isBarrager = true;
