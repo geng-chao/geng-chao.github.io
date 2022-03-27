@@ -299,6 +299,25 @@
     </entry>
     
     
+    
+    <entry>
+      <title>部署博客</title>
+      <link href="/2020/02/24/bo-ke-bu-shu/"/>
+      <url>/2020/02/24/bo-ke-bu-shu/</url>
+      
+        <content type="html"><![CDATA[<p>部署博客 在 tsst 下打开git 执行 下面命令即可<br>hexo clean &amp;&amp; hexo generate –deploy</p><p>hexo clean 清理 hexo g 生成 hexo s 本地启动</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
   
   
 </search>

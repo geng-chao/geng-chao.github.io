@@ -305,4 +305,28 @@
     
   </entry>
   
+  <entry>
+    <title>部署博客</title>
+    <link href="http://www.gcblog.vip/2020/02/24/bo-ke-bu-shu/"/>
+    <id>http://www.gcblog.vip/2020/02/24/bo-ke-bu-shu/</id>
+    <published>2020-02-24T07:37:18.000Z</published>
+    <updated>2022-03-27T08:30:45.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;部署博客 在 tsst 下打开git 执行 下面命令即可&lt;br&gt;hexo clean &amp;amp;&amp;amp; hexo generate –deploy&lt;/p&gt;
+&lt;p&gt;hexo clean 清理 hexo g 生成 hexo s</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://www.gcblog.vip/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
 </feed>
